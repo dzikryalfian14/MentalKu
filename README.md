@@ -11,13 +11,9 @@ Aplikasi Mentalku adalah aplikasi untuk membantu pengguna mengatasi tantangan ke
 - Tantangan Kesehatan Mental di Tempat Kerja: Kesadaran tentang kesehatan mental di tempat kerja telah meningkat. Perusahaan semakin menyadari pentingnya memberikan dukungan bagi karyawan mereka dalam menjaga kesehatan mental.
 - Diskriminasi dan Stigma: Upaya untuk mengatasi stigma dan diskriminasi seputar masalah kesehatan mental telah menjadi fokus. Semakin banyak organisasi dan individu yang berusaha mengakhiri stigma yang berkaitan dengan gangguan mental.
 
-<<<<<<< HEAD
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
 ## Cara Instalasi Project
 1. klon repositori ini dengan `git clone https://github.com/dzikryalfian14/MentalKu.git`
 2. jalankan command `npm install` pada terminal
 3. jalankan command `npm run dev` pada terminal
 4. buka browser `http://localhost:5173`
->>>>>>> 10c3a85d2ae634aa2104f7044f4f585c6f9c2c9d
+
