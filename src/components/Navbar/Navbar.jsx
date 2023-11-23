@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
@@ -19,13 +19,13 @@ const Navbar = () => {
                 </div>
 
                 <nav className="hidden md:flex gap-5 font-medium p-1 text-lg">
-                    <Link to="home" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                    <Link to="/" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                         Home
                     </Link>
-                    <Link to="testmental" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                    <Link to="/testmental" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                         Test Kesehatan Mental
                     </Link>
-                    <Link to="about" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                    <Link to="/about" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                         About US
                     </Link>
                 </nav>
@@ -41,13 +41,13 @@ const Navbar = () => {
                     menu ? "translate-x-0" : "-translate-x-full"
                 } md:hidden flex flex-col absolute bg-[#ffffff] left-0 top-20 font-medium text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300 `}
             >
-                <Link to="home" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                <Link to="/" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                     Home
                 </Link>
-                <Link to="testmental" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                <Link to="/testmental" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                     Test Kesehatan Mental
                 </Link>
-                <Link to="about" spy={true} smooth={true} duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
+                <Link to="/about" duration={500} className="hover:text-[#539165] transition-all cursor-pointer">
                     About Us
                 </Link>
             </div>
