@@ -1,7 +1,18 @@
 import React from "react";
+import Hero from "./SubComponents/Hero";
+import Meaning from "./SubComponents/Meaning";
+import VisiMisi from "./SubComponents/VisiMisi";
+import OurTeam from "./SubComponents/OurTeam";
 
 const About = () => {
-    return <div>About</div>;
+    return (
+        <>
+            <Hero />
+            <Meaning />
+            <VisiMisi />
+            <OurTeam />
+        </>
+    );
 };
 
 export default About;

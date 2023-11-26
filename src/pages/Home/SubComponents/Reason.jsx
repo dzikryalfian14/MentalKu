@@ -1,6 +1,6 @@
 import React from "react";
-import ReasonCard from "../../layout/ReasonCard";
-import HeadingReason from "../../layout/HeadingReason";
+import ReasonCard from "../../../layout/ReasonCard";
+import HeadingReason from "../../../layout/HeadingReason";
 
 const Reason = () => {
     return (

@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../layout/Button";
+import Button from "../../../layout/Button";
 import { Link } from "react-router-dom";
 
-import hero2 from "../../assets/hero-2.png";
+import hero2 from "../../../assets/hero-2.png";
 
 const Definition = () => {
     return (

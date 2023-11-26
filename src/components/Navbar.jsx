@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import icon from "../assets/logo-1.png";
 
 const Navbar = () => {
+    const path = useLocation();
     const [menu, setMenu] = useState(false);
 
     const handleChange = () => {
@@ -29,25 +30,25 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <nav className="hidden md:flex gap-5 font-medium p-1 text-lg">
+                <nav className="hidden md:flex gap-5 font-medium p-1 text-lg align-middle">
                     <Link
                         to="/"
                         duration={500}
-                        className="hover:text-[#539165] transition-all cursor-pointer"
+                        className={`hover:text-[#539165] transition-all cursor-pointer flex items-center ${path.pathname === "/" ? "text-[#539165]" : "text-black"}`}
                     >
                         Home
                     </Link>
                     <Link
                         to="/testmental"
                         duration={500}
-                        className="hover:text-[#539165] transition-all cursor-pointer"
+                        className={`hover:text-[#539165] transition-all cursor-pointer flex items-center ${path.pathname === "/testmental" ? "text-[#539165]" : "text-black"}`}
                     >
                         Test Kesehatan Mental
                     </Link>
                     <Link
                         to="/about"
                         duration={500}
-                        className="hover:text-[#539165] transition-all cursor-pointer"
+                        className={`hover:text-[#539165] transition-all cursor-pointer flex items-center ${path.pathname === "/about" ? "text-[#539165]" : "text-black"}`}
                     >
                         About Us
                     </Link>

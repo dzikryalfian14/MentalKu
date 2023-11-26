@@ -1,32 +1,42 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, startTransition } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const Home = lazy(() => import("./pages/Home/Hero"));
-const Definition = lazy(() => import("./pages/Home/Definition"));
-const Reason = lazy(() => import("./pages/Home/Reason"));
+const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About/About"));
 const TesMental = lazy(() => import("./pages/TestMental/Main"));
 
 const App = () => {
     return (
         <Router>
-            <Suspense fallback={<div>Loading...</div>} />
             <Navbar />
+            <Suspense fallback={<div>Loading...</div>} />
             <Routes>
                 <Route
                     path="/"
                     element={
-                        <>
+                        <React.Suspense fallback={<div>Loading...</div>}>
                             <Home />
-                            <Definition />
-                            <Reason />
-                        </>
+                        </React.Suspense>
                     }
                 />
-                <Route path="/about" element={<About />} />
-                <Route path="/testmental" element={<TesMental />} />
+                <Route
+                    path="/about"
+                    element={
+                        <React.Suspense fallback={<div>Loading...</div>}>
+                            <About />
+                        </React.Suspense>
+                    }
+                />
+                <Route
+                    path="/testmental"
+                    element={
+                        <React.Suspense fallback={<div>Loading...</div>}>
+                            <TesMental />
+                        </React.Suspense>
+                    }
+                />
             </Routes>
             <Footer />
             <Suspense />

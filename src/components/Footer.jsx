@@ -7,7 +7,7 @@ import logo from "../assets/logo-2.png";
 
 const Footer = () => {
     return (
-        <div className="bg-brightColor text-black">
+        <div className="bg-white text-black" style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}>
             <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5 w-full ">
                 <div className="flex items-center mb-8 md:mb-0 mx-auto md:mx-0 flex-col md:flex-row">
                     <img
