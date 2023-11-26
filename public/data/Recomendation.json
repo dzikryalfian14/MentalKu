@@ -1,0 +1,217 @@
+{
+
+    "normal_kecemasan": [
+      {
+        "id":"1", 
+        "saran": "Jaga Kesehatan mental"
+      },
+      {
+        "id":"2", 
+        "saran": "Atur Waktu Luang"
+      },
+      {
+        "id":"3", 
+        "saran": "Mengatur Prioritas"
+      }
+    ],
+    "ringan_kecemasan": [
+      {
+        "id":"1", 
+        "saran": "Cari Dukungan"
+      },
+      {
+        "id":"2", 
+        "saran": "Jaga Pola Hidup Sehat"
+      },
+      {
+        "id":"3", 
+        "saran": "Cari Bantuan Profesional"
+      }
+    ],
+    "sedang_kecemasan": [
+      {
+        "id":"1", 
+        "saran": "Lakukan Aktivitas Relaksasi Rutin"
+      },
+      {
+        "id":"2", 
+        "saran": "Cari Bantuan Profesional"
+      },
+      {
+        "id":"3", 
+        "saran": "Pertimbangkan Terapi dan Obat-obatan"
+      }
+    ],
+    "parah_kecemasan": [
+      {
+        "id":"1", 
+        "saran": "Konsultasikan Dengan Profesional Kesehatan Mental"
+      },
+      {
+        "id":"2", 
+        "saran": "Terapi yang Intensif"
+      },
+      {
+        "id":"3", 
+        "saran": "Dukungan dari Komunitas"
+      }
+    ],
+    "sangat-parah_kecemasan": [
+      {
+        "id":"1", 
+        "saran": "Segera Cari Bantuan Medis"
+      },
+      {
+        "id":"2", 
+        "saran": "Dukungan dan Perawatan Jangka Panjang"
+      }
+    ],
+
+    "normal_stress": [
+      {
+        "id":"1", 
+        "saran": "Olahraga dan Aktifitas Fisik"
+      },
+      {
+        "id":"2", 
+        "saran": "Pengaturan Waktu"
+      },
+      {
+        "id":"3", 
+        "saran": "Relaksasi dan Meditasi"
+      }
+    ],
+    "ringan_stress": [
+      {
+        "id":"1", 
+        "saran": "Komunikasi yang Efektif"
+      },
+      {
+        "id":"2", 
+        "saran": "Meengambil Istirahat"
+      },
+      {
+        "id":"3", 
+        "saran": "Pendekatan Terhadap Masalah"
+      }
+    ],
+    "sedang_stress": [
+      {
+        "id":"1", 
+        "saran": "Mengelola Prioritas"
+      },
+      {
+        "id":"2", 
+        "saran": "Batas Waktu Diri Sendiri"
+      },
+      {
+        "id":"3", 
+        "saran": "Berkonsultasi dengan Profesional"
+      }
+    ],
+    "parah_stress": [
+      {
+        "id":"1", 
+        "saran": "Bantuan Profesional yang Mendalam"
+      },
+      {
+        "id":"2", 
+        "saran": "Terapi Psikologis"
+      },
+      {
+        "id":"3", 
+        "saran": "Istirahat dan Melakukan Perawatan Diri"
+      }
+    ],
+    "sangat-parah_stress": [
+      {
+        "id":"1", 
+        "saran": "Bantuan Profesional yang Mendalam"
+      },
+      {
+        "id":"2", 
+        "saran": "Terapi Psikologis"
+      },
+      {
+        "id":"3", 
+        "saran": "Istirahat dan Melakukan Perawatan Diri"
+      }
+    ],
+
+
+    "normal_depresi": [
+      {
+        "id":"1", 
+        "saran": "Jaga Kesehatan Mental"
+      },
+      {
+        "id":"2", 
+        "saran": "Olahraga dan Aktifitas Fisik"
+      },
+      {
+        "id":"3", 
+        "saran": "Istirahat yang Cukup dan Teratur"
+      },
+      {
+        "id":"4", 
+        "saran": "Menerapkan Teknik Relaksasi Pernapasan"
+      }
+    ],
+    "ringan_depresi": [
+      {
+        "id":"1", 
+        "saran": "Konseling atau Terapi"
+      },
+      {
+        "id":"2", 
+        "saran": "Terlibat dalam Kegiatan Soial"
+      },
+      {
+        "id":"3", 
+        "saran": "Perhatikan Pola Makan"
+      }
+    ],
+    "sedang_depresi": [
+      {
+        "id":"1", 
+        "saran": "Konseling atau Terapi yang Teratur"
+      },
+      {
+        "id":"2", 
+        "saran": "Pertimbangkan Memakai Obat-obatan"
+      },
+      {
+        "id":"3", 
+        "saran": "Rencanakan Kegiatan Setiap Hari"
+      }
+    ],
+    "parah_depresi": [
+      {
+        "id":"1", 
+        "saran": "Perlu Perawatan Medis Segera"
+      },
+      {
+        "id":"2", 
+        "saran": "Pengobatan Komperehensif"
+      },
+      {
+        "id":"3", 
+        "saran": "Libatkan Dukungan Keluarga dan Lingkungan"
+      }
+    ],
+    "sangat-parah_depresi": [
+      {
+        "id":"1", 
+        "saran": "Perlu Perawatan Medis Segera"
+      },
+      {
+        "id":"2", 
+        "saran": "Pengobatan Komperehensif"
+      },
+      {
+        "id":"3", 
+        "saran": "Libatkan Dukungan Keluarga dan Lingkungan"
+      }
+    ]
+  }
+  
