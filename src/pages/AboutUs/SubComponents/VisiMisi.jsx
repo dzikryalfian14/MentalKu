@@ -9,9 +9,9 @@ const VisiMisi = () => {
         </p>
       </div>
       <div className="flex flex-col lg:flex-row lg:gap-10">
-        <div className="mb-8 lg:mb-0 lg:w-1/2">
-          <p className="text-2xl font-bold pb-3">Visi</p>
-          <p className="text-center lg:text-start text-md px-10">
+        <div className="mb-8 lg:mb-0 lg:w-1/2 bg-white rounded-2xl p-8 lg:p-10">
+          <p className="text-2xl font-bold pb-5">Visi</p>
+          <p className="text-center text-md lg:px-5">
             Menjadi sumber terpercaya dan terdepan dalam menyediakan informasi,
             dukungan, dan sumber daya bagi setiap individu yang mencari
             perawatan dan pemahaman tentang kesehatan mental, dengan fokus pada
@@ -19,9 +19,9 @@ const VisiMisi = () => {
             mental
           </p>
         </div>
-        <div className="lg:w-1/2">
-          <p className="text-2xl font-bold pb-3">Misi</p>
-          <p className="text-center lg:text-start text-md px-10">
+        <div className="lg:w-1/2 bg-white rounded-2xl p-8 lg:p-10">
+          <p className="text-2xl font-bold pb-5">Misi</p>
+          <p className="text-center text-md lg:px-5">
             Memberikan informasi yang komprehensif dan mudah dipahami tentang
             kesehatan mental kepada semua lapisan masyarakat. Menyediakan
             platform yang dapat diakses oleh siapa pun, di mana pun, tanpa

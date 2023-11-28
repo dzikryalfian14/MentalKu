@@ -10,19 +10,19 @@ const Footer = () => {
       className="bg-white"
       style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}
     >
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-screen-xl p-10 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <img srcSet={logo} className="h-20 me-3" alt="MentalKu Logo" />
-              <span className="self-start text-3xl font-semibold whitespace-nowrap">
+              <span className="pe-5 self-start text-3xl font-semibold whitespace-nowrap">
                 MentalKu
               </span>
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
                 Halaman
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
                 Follow us
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">
@@ -52,7 +52,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
                 Legal
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">

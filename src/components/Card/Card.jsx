@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLinkedin } from "react-icons/fa";
 
 const Card = ({ imgSrc, title, noId, tags, linkedInURL, linkedInPhoto }) => {
   return (
@@ -21,9 +22,10 @@ const Card = ({ imgSrc, title, noId, tags, linkedInURL, linkedInPhoto }) => {
         <div className="flex mt-4 md:mt-6">
           <a
             href={linkedInURL}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-gray-200"
+            target="_blank"
           >
-            LinkedIn
+            <FaLinkedin />
           </a>
         </div>
       </div>
