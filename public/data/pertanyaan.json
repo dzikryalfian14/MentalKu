@@ -1,0 +1,226 @@
+{
+  "questions_kecemasan": [
+    {
+      "id": 1,
+      "question": "Apakah mulut anda terasa kering?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 2,
+      "question": "Apakah anda merasakan gangguan dalam bernapas (seperrti napas cepat, sulit bernapas)?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 3,
+      "question": "Apakah anggota tubuh anda melemah?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 4,
+      "question": "Apakah anda sedang cemas karena sesuatu?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 5,
+      "question": "Apakah anda merasa lebih lelah dari biasanya",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 6,
+      "question": "Apakah anda sedang berkeringat,  namun bukan karena aktivitas fisik?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 7,
+      "question": "Apakah anda merasa takut secara tiba-tiba?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 8,
+      "question": "Apakah anda kesulitan menelan?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 9,
+      "question": "Apakah denyut jantung anda berdebar?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 10,
+      "question": "Apakah anda mudah panik",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 11,
+      "question": "Apakah anda takut terhambat karena tidak dapat melakukan sesuatu",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 12,
+      "question": "Apakah anda sedang merasa bahaya atau terancam?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 13,
+      "question": "Apakah anda khawatir dan menjadi panik dengan situasi sekarang ini?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 14,
+      "question": "Apakah anda gemetar?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    }
+  ],
+
+  "questions_depresi": [
+    {
+      "id": 1,
+      "question": "Tidak dapat melihat hal yang positif dari suatu kejadian",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 2,
+      "question": "Merasa sepertinya tidak kuat lagi untuk melakukan suatu kegiatan",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 3,
+      "question": "Pesimis",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 4,
+      "question": "Merasa sedih dan depresi",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 5,
+      "question": "Kehilangan minat pada banyak hal (misal: makan, ambulasi, sosialisasi)",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 6,
+      "question": "Merasa diri tidak layak",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 7,
+      "question": "Merasa hidup tidak berharga",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 7,
+      "question": "Tidak dapat menikmati hal-hal yang saya lakukan",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    }
+  ],
+
+  "questions_stress": [
+    {
+      "id": 1,
+      "question": "Apakah kadang atau sering marah karena masalah sepele?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 2,
+      "question": "Apakah anda cenderung bereaksi berlebihan pada sebuah situasi?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 3,
+      "question": "Apakah anda kesulitan untuk santai?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 4,
+      "question": "Apakah anda mudah merasa kesal?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 5,
+      "question": "Apakah kecemasan anda menghasilkan banyak energi?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 6,
+      "question": "Apakah anda tidak sabaran?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 7,
+      "question": "Apakah anda mudah tersinggung?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 8,
+      "question": "Apakah anda kesulitan beristirahat?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 9,
+      "question": "Apakah anda mudah marah?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 10,
+      "question": "Apakah anda kesulitan tenang karena ada masalaah yang mengganggu?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 11,
+      "question": "Apakah anda sulit mentoleransi gangguan-gangguan terhadap hal yang sedang dilakukan?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 12,
+      "question": "Apakah anda sedang merasa tegang?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 13,
+      "question": "Apakah anda tidak bisa memaklumi halangan saat menyelesaikan sesuatu?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    },
+    {
+      "id": 14,
+      "question": "Apakah anda mudah gelisah?",
+      "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
+      "value": [0, 1, 2, 3]
+    }
+  ]
+}

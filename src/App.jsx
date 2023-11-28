@@ -1,39 +1,72 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React, { Suspense, lazy, startTransition } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Loading from "./components/Loading/Loading";
 
-function App() {
-    const [count, setCount] = useState(0);
+const Home = lazy(() => import("./component/Home/Home"));
+const AboutUs = lazy(() => import("./component/AboutUs/AboutUs"));
+const TesMental = lazy(() => import("./component/TestMental/TesMental"));
 
-    return (
-        <>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img
-                        src={reactLogo}
-                        className="logo react"
-                        alt="React logo"
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
-    );
-}
+const App = () => {
+  return (
+    <Router>
+      <Navbar />
+      <Suspense fallback={<Loading />} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <Home />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <AboutUs />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/testmental"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <TesMental />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/topik1"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <TesMental />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/topik2"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <TesMental />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/topik3"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <TesMental />
+            </React.Suspense>
+          }
+        />
+      </Routes>
+      <Footer />
+      <Suspense />
+    </Router>
+  );
+};
 
 export default App;
