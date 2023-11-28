@@ -1,22 +1,31 @@
 import React from "react";
 
-const Card = ({ imgSrc, title, description, tags }) => {
+const Card = ({ imgSrc, title, noId, tags, linkedInURL, linkedInPhoto }) => {
   return (
-    <div className="rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={imgSrc} alt={title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{description}</p>
-      </div>
-      <div className="px-6 pt-4 pb-2">
-        {tags.map((tag, index) => (
-          <span
-            key={index}
-            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2"
+    <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+      <div className="flex flex-col items-center py-10">
+        <img
+          className="w-24 h-24 mb-3 rounded-full shadow-lg"
+          src={linkedInPhoto}
+          alt={title}
+        />
+        <h5 className="mb-1 text-xl font-medium text-gray-900">
+          {title}
+        </h5>
+        <span className="text-sm text-center italic text-gray-800">
+          {noId}
+        </span>
+        <span className="text-sm text-center text-gray-500">
+          {tags}
+        </span>
+        <div className="flex mt-4 md:mt-6">
+          <a
+            href={linkedInURL}
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200"
           >
-            {tag}
-          </span>
-        ))}
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );

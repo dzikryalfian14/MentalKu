@@ -1,104 +1,118 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
-import { RiTwitterXFill } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
+import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
 import logo from "../assets/logo-2.png";
 
 const Footer = () => {
-    return (
-        <div className="bg-white text-black" style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}>
-            <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5 w-full ">
-                <div className="flex items-center mb-8 md:mb-0 mx-auto md:mx-0 flex-col md:flex-row">
-                    <img
-                        loading="lazy"
-                        src={logo}
-                        alt="Logo"
-                        className="h-20 w-20 rounded-xl object-contain object-center fill-white overflow-hidden shrink-0 max-w-full"
-                    />
-                    <div className="md:ml-5 md:text-left text-center mt-3 md:mt-0">
-                        <h1 className="font-semibold text-xl pb-4 underline">
-                            MentalKu
-                        </h1>
-                        <p className="text-m md:text-left text-center md:max-w-[200px] max-w-none pt-0 ">
-                            Teman Sejati di Setiap Langkah Perjalanan Kesehatan
-                            Mental Anda
-                        </p>
-                    </div>
-                </div>
-
-                <div className="mb-8 md:mb-0 mx-auto md:mx-0 hidden md:block">
-                    <h2 className="font-medium text-xl pb-4 pt-5 md:pt-0 underline">
-                        Navigasi
-                    </h2>
-                    <nav className="flex flex-col gap-2">
-                        <Link
-                            to="/"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className="hover:text-[#539165] transition-all cursor-pointer"
-                        >
-                            Beranda
-                        </Link>
-                        <a
-                            className="hover:text-[#539165] transition-all cursor-pointer"
-                            href="/testmental"
-                        >
-                            Test Kesehatan Mental
-                        </a>
-                        <a
-                            className="hover:text-[#539165] transition-all cursor-pointer"
-                            href="/about"
-                        >
-                            Tentang Kami
-                        </a>
-                    </nav>
-                </div>
-
-                <div className="mb-8 md:mb-0 mx-auto md:mx-0 hidden md:block">
-                    <h2 className="font-medium text-xl pb-4 pt-5 md:pt-0 underline">
-                        Kontak Kami
-                    </h2>
-                    <nav className="flex flex-col gap-2">
-                        <a
-                            className="hover:text-[#539165] transition-all cursor-pointer"
-                            href="/"
-                        >
-                            mentalku@gmail.com
-                        </a>
-                    </nav>
-                </div>
-
-                <div className="mx-auto md:mx-0">
-                    <h2 className="font-medium text-xl pb-4 pt-5 md:pt-0 underline">
-                        Follow Us
-                    </h2>
-                    <nav className="flex flex-row md:items-center gap-2">
-                        <BsFacebook
-                            size={25}
-                            className="hover:text-brightColor transition-all cursor-pointer"
-                        />
-                        <RiTwitterXFill
-                            size={25}
-                            className="hover:text-brightColor transition-all cursor-pointer"
-                        />
-                        <BsInstagram
-                            size={25}
-                            className="hover:text-brightColor transition-all cursor-pointer"
-                        />
-                    </nav>
-                </div>
+  return (
+    <footer
+      className="bg-white"
+      style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}
+    >
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <Link to="/" className="flex items-center">
+              <img srcSet={logo} className="h-20 me-3" alt="MentalKu Logo" />
+              <span className="self-start text-3xl font-semibold whitespace-nowrap">
+                MentalKu
+              </span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+                Halaman
+              </h2>
+              <div className="text-gray-500 font-medium flex flex-col">
+                <Link to="/" className="hover:underline mb-4">
+                  Home
+                </Link>
+                <Link to="/about" className="hover:underline mb-4">
+                  About Us
+                </Link>
+              </div>
             </div>
             <div>
-                <p className="text-center py-4 ">
-                    <span className="text-brightColor ">
-                        Copyright © 2024 MentalKu | All rights reserved
-                    </span>
-                </p>
+              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+                Follow us
+              </h2>
+              <div className="text-gray-500 font-medium flex flex-col">
+                <a
+                  href="https://github.com/dzikryalfian14/MentalKu"
+                  className="hover:underline mb-4"
+                  target="_blank"
+                >
+                  Github
+                </a>
+                <a href="#" className="hover:underline mb-4" target="_blank">
+                  Discord
+                </a>
+              </div>
             </div>
+            <div>
+              <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase">
+                Legal
+              </h2>
+              <div className="text-gray-500 font-medium flex flex-col">
+                <Link to="#" className="mb-4 hover:underline">
+                  Privacy Policy
+                </Link>
+                <Link to="#" className="mb-4 hover:underline">
+                  Terms &amp; Conditions
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center">
+            © 2023{" "}
+            <Link to="/" className="hover:underline">
+              MentalKu™
+            </Link>
+            . All Rights Reserved.
+          </span>
+          <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 ms-5"
+              target="_blank"
+            >
+              <FaFacebook />
+              <span className="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 ms-5"
+              target="_blank"
+            >
+              <FaInstagram />
+              <span className="sr-only">Instagram page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 ms-5"
+              target="_blank"
+            >
+              <FaXTwitter />
+              <span className="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="https://github.com/dzikryalfian14/MentalKu"
+              className="text-gray-500 hover:text-gray-900 ms-5"
+              target="_blank"
+            >
+              <FaGithub />
+              <span className="sr-only">Github page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
