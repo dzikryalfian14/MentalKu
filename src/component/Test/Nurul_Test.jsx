@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import quizData from '../public/data/pertanyaan.json';
-import recomendationData from '../public/data/Recomendation.json';
+import quizData from '../../../public/data/pertanyaan.json';
+import recomendationData from '../../../public/data/Recomendation.json';
 
 const Quiz = () => {
   const [category, setCategory] = useState(null);
