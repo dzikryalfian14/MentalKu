@@ -1,8 +1,8 @@
 import React from "react";
-import Penyebab from "./sub/penyebab";
-import Dampak from "./sub/dampak";
-import Hero from "./sub/hero";
-import Tes from "./sub/tes";
+import Penyebab from "./kecemasanPage/penyebab";
+import Dampak from "./kecemasanPage/dampak";
+import Hero from "./kecemasanPage/hero";
+import Tes from "./kecemasanPage/tes";
 
 const MentalTest = () => {
     return (
