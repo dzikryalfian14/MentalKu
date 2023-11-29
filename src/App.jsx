@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading/Loading";
 
-const Home = lazy(() => import("./component/Home/Home"));
-const AboutUs = lazy(() => import("./component/AboutUs/AboutUs"));
-const TesMental = lazy(() => import("./component/TestMental/TesMental"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const TesMental = lazy(() => import("./pages/TestMental/TesMental"));
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
           }
         />
         <Route
-          path="/about"
+          path="/tentang-kami"
           element={
             <React.Suspense fallback={<Loading />}>
               <AboutUs />
@@ -31,31 +31,7 @@ const App = () => {
           }
         />
         <Route
-          path="/testmental"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik1"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik2"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik3"
+          path="/tes-kesehatan-mental"
           element={
             <React.Suspense fallback={<Loading />}>
               <TesMental />
