@@ -29,8 +29,15 @@ const Definition = () => {
               tes topik kesehatan mental yang dapat membantu Anda memahami
               kondisi Anda.
             </div>
-            <Link to="/testmental" duration={500}></Link>
-            <Button title="Coba Sekarang" />
+            <div className="w-auto py-5">
+              <Link
+                to="/tes-kesehatan-mental"
+                duration={500}
+                className="bg-orange-200 py-3 px-5 rounded-full mt-4 outline hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:bg-brightGreen hover:text-white transition-all"
+              >
+                Coba Sekarang
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -4,7 +4,10 @@ const VisiMisi = () => {
   return (
     <div className="text-center px-10 py-10 lg:py-16 lg:px-32 bg-[#CDFAD5]">
       <div>
-        <p className="text-3xl font-semibold lg:text-3xl pb-10">
+        <p
+          className="text-3xl font-semibold lg:text-3xl pb-10"
+          style={{ textShadow: "3px 3px 3px rgba(0, 0, 0, 0.3)" }}
+        >
           Visi dan Misi MentalKu
         </p>
       </div>

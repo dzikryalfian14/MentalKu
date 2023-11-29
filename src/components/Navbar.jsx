@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
-import icon from "../assets/logo-1.png";
+import icon from "../assets/logo/logo-1.png";
 
 const Navbar = () => {
   const path = useLocation();
@@ -55,76 +55,23 @@ const Navbar = () => {
                 path.pathname === "/" ? "text-[#FF971C]" : "text-gray-900"
               }`}
             >
-              Home
-            </Link>
-            <button
-              className={`flex items-center justify-between w-auto py-2 px-3 hover:text-[#FFCF96] md:hover:bg-transparent md:border-0 md:p-0 ${
-                isDoubleDropdownOpen ? "text-[#FF971C]" : "text-gray-900"
-              }`}
-              onClick={toggleDoubleDropdown}
-            >
-              Tes Mental
-              {!isDoubleDropdownOpen ? <FaChevronDown className="pl-1" /> : <FaChevronUp className="pl-1" />}
-            </button>
-            {isDoubleDropdownOpen && (
-              <div
-                className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 absolute top-48 left-auto md:top-14 md:left-auto lg:top-14 lg:left-auto"
-                id="doubleDropdownButton"
-              >
-                <div
-                  className="py-2 text-sm text-gray-700"
-                  aria-labelledby="doubleDropdownButton"
-                >
-                  <Link
-                    to="/topik1"
-                    className={`block px-4 py-2 hover:text-[#FFCF96] ${
-                      path.pathname === "/topik1"
-                        ? "text-[#FF971C]"
-                        : "text-gray-900"
-                    }`}
-                  >
-                    Topik 1
-                  </Link>
-                  <Link
-                    to="/topik2"
-                    className={`block px-4 py-2 hover:text-[#FFCF96] ${
-                      path.pathname === "/topik2"
-                        ? "text-[#FF971C]"
-                        : "text-gray-900"
-                    }`}
-                  >
-                    Topik 2
-                  </Link>
-                  <Link
-                    to="/topik3"
-                    className={`block px-4 py-2 hover:text-[#FFCF96] ${
-                      path.pathname === "/topik3"
-                        ? "text-[#FF971C]"
-                        : "text-gray-900"
-                    }`}
-                  >
-                    Topik 3
-                  </Link>
-                </div>
-              </div>
-            )}
-            <Link
-              to="/about"
-              className={`block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#FFCF96] ${
-                path.pathname === "/about" ? "text-[#FF971C]" : "text-gray-900"
-              }`}
-            >
-              About
+              Beranda
             </Link>
             <Link
-              to="/contact"
+              to="/tes-kesehatan-mental"
               className={`block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#FFCF96] ${
-                path.pathname === "/contact"
-                  ? "text-[#FF971C]"
-                  : "text-gray-900"
+                path.pathname === "/tes-kesehatan-mental" ? "text-[#FF971C]" : "text-gray-900"
               }`}
             >
-              Contact
+              Tes Kesehatan Mental
+            </Link>
+            <Link
+              to="/tentang-kami"
+              className={`block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#FFCF96] ${
+                path.pathname === "/tentang-kami" ? "text-[#FF971C]" : "text-gray-900"
+              }`}
+            >
+              Tentang Kami
             </Link>
           </div>
         </div>

@@ -23,7 +23,7 @@ const App = () => {
           }
         />
         <Route
-          path="/about"
+          path="/tentang-kami"
           element={
             <React.Suspense fallback={<Loading />}>
               <AboutUs />
@@ -31,31 +31,7 @@ const App = () => {
           }
         />
         <Route
-          path="/testmental"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik1"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik2"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/topik3"
+          path="/tes-kesehatan-mental"
           element={
             <React.Suspense fallback={<Loading />}>
               <TesMental />

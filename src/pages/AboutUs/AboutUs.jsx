@@ -1,15 +1,15 @@
 import React from "react";
-import Hero from "./SubComponents/Jumbotron";
-import Meaning from "./SubComponents/Meaning";
+import Jumbotron from "./SubComponents/Jumbotron";
 import VisiMisi from "./SubComponents/VisiMisi";
+import Testimoni from "./SubComponents/Testimoni";
 import OurTeam from "./SubComponents/OurTeam";
 
 const About = () => {
   return (
     <>
-      <Hero />
-      <Meaning />
+      <Jumbotron />
       <VisiMisi />
+      <Testimoni />
       <OurTeam />
     </>
   );

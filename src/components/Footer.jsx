@@ -2,12 +2,12 @@ import React from "react";
 import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
-import logo from "../assets/logo-2.png";
+import logo from "../assets/logo/logo-2.png";
 
 const Footer = () => {
   return (
     <footer
-      className="bg-white"
+      className="bg-white mt-10"
       style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}
     >
       <div className="mx-auto w-full max-w-screen-xl p-10 py-6 lg:py-8">
@@ -22,21 +22,21 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
-                Halaman
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900">
+                Navigasi
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">
                 <Link to="/" className="hover:underline mb-4">
-                  Home
+                  Beranda
                 </Link>
-                <Link to="/about" className="hover:underline mb-4">
-                  About Us
+                <Link to="/tentang-kami" className="hover:underline mb-4">
+                  Tentang Kami
                 </Link>
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
-                Follow us
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900">
+                Ikuti Kami
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">
                 <a
@@ -52,15 +52,15 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900 uppercase">
+              <h2 className="mb-6 text-md lg:text-lg font-semibold text-gray-900">
                 Legal
               </h2>
               <div className="text-gray-500 font-medium flex flex-col">
                 <Link to="#" className="mb-4 hover:underline">
-                  Privacy Policy
+                  Kebijakan Pribadi
                 </Link>
                 <Link to="#" className="mb-4 hover:underline">
-                  Terms &amp; Conditions
+                  Ketentuan &amp; Syarat
                 </Link>
               </div>
             </div>
