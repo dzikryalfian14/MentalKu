@@ -6,7 +6,7 @@ import Loading from "./components/Loading/Loading";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
-const TesMental = lazy(() => import("./pages/TestMental/TesMental"));
+const TesMental = lazy(() => import("./pages/TestMental/TestMental"));
 
 const App = () => {
   return (

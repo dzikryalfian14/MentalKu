@@ -60,7 +60,9 @@ const Navbar = () => {
             <Link
               to="/tes-kesehatan-mental"
               className={`block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#FFCF96] ${
-                path.pathname === "/tes-kesehatan-mental" ? "text-[#FF971C]" : "text-gray-900"
+                path.pathname === "/tes-kesehatan-mental"
+                  ? "text-[#FF971C]"
+                  : "text-gray-900"
               }`}
             >
               Tes Kesehatan Mental
@@ -68,7 +70,9 @@ const Navbar = () => {
             <Link
               to="/tentang-kami"
               className={`block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#FFCF96] ${
-                path.pathname === "/tentang-kami" ? "text-[#FF971C]" : "text-gray-900"
+                path.pathname === "/tentang-kami"
+                  ? "text-[#FF971C]"
+                  : "text-gray-900"
               }`}
             >
               Tentang Kami

@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Testimoni = () => {
-  return (
-    <div>
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Testimoni
+export default Testimoni;

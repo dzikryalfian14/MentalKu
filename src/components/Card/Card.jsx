@@ -10,15 +10,9 @@ const Card = ({ imgSrc, title, noId, tags, linkedInURL, linkedInPhoto }) => {
           src={linkedInPhoto}
           alt={title}
         />
-        <h5 className="mb-1 text-xl font-medium text-gray-900">
-          {title}
-        </h5>
-        <span className="text-sm text-center italic text-gray-800">
-          {noId}
-        </span>
-        <span className="text-sm text-center text-gray-500">
-          {tags}
-        </span>
+        <h5 className="mb-1 text-xl font-medium text-gray-900">{title}</h5>
+        <span className="text-sm text-center italic text-gray-800">{noId}</span>
+        <span className="text-sm text-center text-gray-500">{tags}</span>
         <div className="flex mt-4 md:mt-6">
           <a
             href={linkedInURL}
