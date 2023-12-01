@@ -1,10 +1,10 @@
 import { useState } from "react";
 // import Quiz from './Quiz';
-import WorryTest from "./WorryTest";
-import DepressionTest from "./DepressionTest";
-import StressTest from "./StressTest";
+import WorryTest from "./kecemasanPage/WorryTest";
+import DepressionTest from "./depresiPage/DepressionTest";
+import StressTest from "./stressPage/StressTest";
 
-const App = () => {
+const SelectTopic = () => {
     const [selectCategory, setCategory] = useState(null);
     const [hasSelectedCategory, setHasSelectedCategory] = useState(false);
 
@@ -48,4 +48,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default SelectTopic;

@@ -3,10 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading/Loading";
+import { Link } from 'react-router-dom';
+
+import './index.css';
+import './styles/Test.css';
 
 const Home = lazy(() => import("./pages/Home/Home"));
-const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
-const TesMental = lazy(() => import("./pages/TestMental/TesMental"));
+// const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const TesMental = lazy(() => import("./pages/TestMental/SelectTopicTest"));
 
 const App = () => {
   return (
@@ -22,14 +26,14 @@ const App = () => {
             </React.Suspense>
           }
         />
-        <Route
+        {/* <Route
           path="/tentang-kami"
           element={
             <React.Suspense fallback={<Loading />}>
               <AboutUs />
             </React.Suspense>
           }
-        />
+        /> */}
         <Route
           path="/tes-kesehatan-mental"
           element={

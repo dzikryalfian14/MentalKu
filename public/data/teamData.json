@@ -1,0 +1,32 @@
+[
+  {
+    "imgSrc": "./src/assets/hero-1.png",
+    "title": "John",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "tags": ["#photography", "#travel", "#winter"]
+  },
+  {
+    "imgSrc": "./src/assets/hero-1.png",
+    "title": "Reyhand",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "tags": ["#UI/UX", "#Front-End", "#TeamWork"]
+  },
+  {
+    "imgSrc": "./src/assets/hero-1.png",
+    "title": "John",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "tags": ["#photography", "#travel", "#fall"]
+  },
+  {
+    "imgSrc": "./src/assets/hero-1.png",
+    "title": "John",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "tags": ["#photography", "#travel", "#fall"]
+  },
+  {
+    "imgSrc": "./src/assets/hero-1.png",
+    "title": "John",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+    "tags": ["#photography", "#travel", "#fall"]
+  }
+]
