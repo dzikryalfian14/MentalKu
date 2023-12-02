@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import quizData from "../../../../public/data/pertanyaan.json";
 import recomendationData from "../../../../public/data/Recomendation.json";
 
-import "./index.css";
-import "./styles/Test.css";
+import "../../../index.css";
+import "../../../styles/Test.css";
 
 // import 'tailwindcss/base';
 // import 'tailwindcss/components';
@@ -47,31 +47,31 @@ const Result_Stress = () => {
         let data = recomendationData;
 
         // logika penilaian stress
-        if (totalScore >= 0 && totalScore <= 9) {
+        if (totalScore >= 0 && totalScore <= 14) {
             setStressCategory("NORMAL");
             setStressRecomendation(data.normal_stress);
             setStressDesign(
                 "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
             );
-        } else if (totalScore >= 10 && totalScore <= 13) {
+        } else if (totalScore >= 15 && totalScore <= 18) {
             setStressCategory("RINGAN");
             setStressRecomendation(data.ringan_stress);
             setStressDesign(
                 "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
             );
-        } else if (totalScore >= 14 && totalScore <= 20) {
+        } else if (totalScore >= 19 && totalScore <= 25) {
             setStressCategory("SEDANG");
             setStressRecomendation(data.sedang_stress);
             setStressDesign(
                 "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
             );
-        } else if (totalScore >= 21 && totalScore <= 27) {
+        } else if (totalScore >= 26 && totalScore <= 33) {
             setStressCategory("PARAH");
             setStressRecomendation(data.parah_stress);
             setStressDesign(
                 "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
             );
-        } else if (totalScore > 28) {
+        } else if (totalScore > 34) {
             setStressCategory("SANGAT PARAH");
             setStressRecomendation(data["sangat-parah_stress"]);
             setStressDesign(

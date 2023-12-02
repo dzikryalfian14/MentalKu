@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import quizData from '../../../../public/data/pertanyaan.json';
 import recomendationData from '../../../../public/data/Recomendation.json';
 
-import './index.css';
-import './styles/Test.css';
+import '../../../index.css';
+import '../../../styles/Test.css';
 
 // import 'tailwindcss/base';
 // import 'tailwindcss/components';
@@ -46,23 +46,23 @@ const Result_Worry = () => {
     let data = recomendationData;
 
    // logika penilaian kecemasan
-   if (totalScore >= 0 && totalScore <= 9) {
+   if (totalScore >= 0 && totalScore <= 7) {
     setWorryCategory("NORMAL");
     setWorryRecomendation(data.normal_kecemasan);
     setWorryDesign("text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10");
-  } else if (totalScore >= 10 && totalScore <= 13) {
+  } else if (totalScore >= 8 && totalScore <= 9) {
     setWorryCategory("RINGAN");
     setWorryRecomendation(data.ringan_kecemasan);
     setWorryDesign("text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10");
-  } else if (totalScore >= 14 && totalScore <= 20) {
+  } else if (totalScore >= 10 && totalScore <= 14) {
     setWorryCategory("SEDANG");
     setWorryRecomendation(data.sedang_kecemasan);
     setWorryDesign("text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10");
-  } else if (totalScore >= 21 && totalScore <= 27) {
+  } else if (totalScore >= 15 && totalScore <= 19) {
     setWorryCategory("PARAH");
     setWorryRecomendation(data.parah_kecemasan);
     setWorryDesign("text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10");
-  } else if (totalScore > 28) {
+  } else if (totalScore > 20) {
     setWorryCategory("SANGAT PARAH");
     setWorryRecomendation(data['sangat-parah_kecemasan']);
     setWorryDesign("text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10");

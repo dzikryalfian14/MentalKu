@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import quizData from '../../../../public/data/pertanyaan.json';
 import recomendationData from '../../../../public/data/Recomendation.json';
 
-import './index.css';
-import './styles/Test.css';
+import '../../../index.css';
+import '../../../styles/Test.css';
 
 // import 'tailwindcss/base';
 // import 'tailwindcss/components';
@@ -74,7 +74,7 @@ const Result_Depression = () => {
 
   return (
     // Kuis
-    <div className="m-10 border shadow-sm bg-white self-center flex w-full max-w-[1340px] flex-col justify-center items-center mt-16 mb-16 px-16 py-12 rounded-2xl border-solid border-rose-400 max-md:max-w-full max-md:my-10 max-md:px-20">
+    <div className="m-10  border shadow-sm bg-white self-center flex w-full max-w-[1340px] flex-col justify-center items-center mt-16 mb-16 px-16 py-12 rounded-2xl border-solid border-rose-400 max-md:max-w-full max-md:my-10 max-md:px-20">
       {currentQuestionIndex < quizData.questions_depresi.length && (
       <h2 className="p-4 justify-center text-black text-justify text-5xl self-stretch max-md:max-w-full max-md:text-4xl">
         Pertanyaan {currentQuestionIndex + 1} dari {quizData.questions_depresi.length}
@@ -98,6 +98,7 @@ const Result_Depression = () => {
               {option}
             </label>
           ))}
+          
           <button onClick={handleNextQuestion} className="justify-center text-black text-center text-3xl bg-emerald-100 self-center items-stretch m-10 px-16 py-6 rounded-3xl max-md:mt-10 max-md:px-5">Next</button>
         </div>
       )}
