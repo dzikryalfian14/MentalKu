@@ -1,8 +1,8 @@
 import { useState } from "react";
 // import Quiz from './Quiz';
-import WorryTest from "./kecemasanPage/WorryTest";
-import DepressionTest from "./depresiPage/DepressionTest";
-import StressTest from "./stressPage/StressTest";
+import WorryTest from "./pages/TestMental/kecemasanPage/WorryTest.jsx";
+import DepressionTest from "./pages/TestMental/depresiPage/DepressionTest.jsx";
+import StressTest from "./pages/TestMental/stressPage/StressTest.jsx";
 
 const SelectTopic = () => {
     const [selectCategory, setCategory] = useState(null);

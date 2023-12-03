@@ -85,30 +85,20 @@ const Result_Stress = () => {
 
     return (
         // Kuis
-        <div className="m-10 border shadow-sm bg-white self-center flex w-full max-w-[1340px] flex-col justify-center items-center mt-16 mb-16 px-16 py-12 rounded-2xl border-solid border-rose-400 max-md:max-w-full max-md:my-10 max-md:px-20">
-            {currentQuestionIndex < quizData.questions_stress.length && (
-                <h2 className="p-4 justify-center text-black text-justify text-5xl self-stretch max-md:max-w-full max-md:text-4xl">
-                    Pertanyaan {currentQuestionIndex + 1} dari{" "}
-                    {quizData.questions_stress.length}
-                </h2>
+        <div className="m-10  border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-rose-400 max-md:max-w-full max-md:my-10 max-md:px-20">
+        {currentQuestionIndex < quizData.questions_stress.length && (
+                <h2 className="p-4 justify-center text-black text-justify text-4xl self-stretch max-md:max-w-full max-md:text-4xl">
+                    Pertanyaan {currentQuestionIndex + 1} dari{" "}{quizData.questions_stress.length}</h2>
             )}
-            <div className="bg-black self-stretch shrink-0 h-px mt-10 max-md:max-w-full" />
+            <div className="bg-black self-stretch shrink-0 h-px mt-8 max-md:max-w-full" />
             {currentQuestionIndex < quizData.questions_stress.length && (
                 <div key={quizData.questions_stress[currentQuestionIndex].id}>
-                    <p className="pt-4 pb-8 justify-center text-rose-400 text-justify text-4xl self-stretch mt-12 max-md:max-w-full max-md:mt-10">
-                        {
-                            quizData.questions_stress[currentQuestionIndex]
-                                .question
-                        }
-                    </p>
+                    <p className="pt-4 pb-8 justify-center text-rose-400 text-justify text-3xl self-stretch mt-10 max-md:max-w-full max-md:mt-10">{quizData.questions_depresi[currentQuestionIndex].question}</p>
                     <div className="self-stretch shrink-0 h-px mt-10 max-md:max-w-full" />
                     {quizData.questions_stress[
                         currentQuestionIndex
                     ].options.map((option, optionIndex) => (
-                        <label
-                            key={optionIndex}
-                            className="w-32 rounded-md border-4 shadow-sm justify-center m-10 text-rose-400 text-justify text-2xl border shadow-sm bg-white grow items-stretch pl-9 pr-14 py-5 rounded-md border-solid border-rose-400 max-md:px-5 hover:bg-gray-100 active:border-rose-900"
-                        >
+                        <label key={optionIndex} className="w-32 rounded-md border-4 shadow-sm justify-center m-10 text-rose-400 text-justify text-1xl border shadow-sm bg-white grow items-stretch pl-9 pr-14 py-5 rounded-md border-solid border-rose-400 max-md:px-5 hover:bg-gray-100 active:border-rose-900">
                             <input
                                 type="checkbox"
                                 name={`question_${quizData.questions_stress[currentQuestionIndex].id}`}
@@ -136,12 +126,10 @@ const Result_Stress = () => {
                             {option}
                         </label>
                     ))}
-                    <button
-                        onClick={handleNextQuestion}
-                        className="justify-center text-black text-center text-3xl bg-emerald-100 self-center items-stretch m-10 px-16 py-6 rounded-3xl max-md:mt-10 max-md:px-5"
-                    >
-                        Next
-                    </button>
+            <br />
+          <div class="flex justify-center">
+          <button onClick={handleNextQuestion} className="text-black text-center text-3xl bg-emerald-100 mt-20 px-6 py-3 rounded-3xl max-md:mt-10 max-md:px-5">Next</button>
+          </div>
                 </div>
             )}
 
