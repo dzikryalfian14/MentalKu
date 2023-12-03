@@ -8,11 +8,21 @@ import Desclimer from "./SubComponents/Desclimer";
 const TestMental = () => {
   return (
     <>
-      <Hero />
-      <Alur />
-      <DaftarTest />
-      <Panduan />
-      <Desclimer />
+      <div>
+        <Hero />
+      </div>
+      <div id="alur">
+        <Alur />
+      </div>
+      <div id="daftartest">
+        <DaftarTest />
+      </div>
+      <div id="panduan">
+        <Panduan />
+      </div>
+      <div>
+        <Desclimer />
+      </div>
     </>
   );
 };

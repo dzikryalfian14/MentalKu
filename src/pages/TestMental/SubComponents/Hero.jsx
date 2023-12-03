@@ -16,13 +16,31 @@ const Hero = () => {
           Mari isi tes di bawah ini dan temukan hasilnya!
         </p>
         <div className="mt-10">
-          <Link to="/alur" duration={500}>
+          <Link
+            to="alur"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="hover:text-[#539165] transition-all cursor-pointer"
+          >
             <Button title="ALUR TEST KESEHATAN MENTAL" />
           </Link>
-          <Link to="/daftartes" duration={500}>
+          <Link
+            to="daftartest"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="hover:text-[#539165] transition-all cursor-pointer"
+          >
             <Button title="PILIH KATEGORI TEST" />
           </Link>
-          <Link to="/panduan" duration={500}>
+          <Link
+            to="panduan"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="hover:text-[#539165] transition-all cursor-pointer"
+          >
             <Button title="PANDUAN PENGISIAN TEST" />
           </Link>
         </div>
