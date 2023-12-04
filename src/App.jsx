@@ -7,6 +7,9 @@ import Loading from "./components/Loading/Loading";
 const Home = lazy(() => import("./pages/Home/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
 const TesMental = lazy(() => import("./pages/TestMental/TestMental"));
+const Depresi = lazy(() => import("./pages/TestMental/Kategori/Depresi"));
+const Stress = lazy(() => import("./pages/TestMental/Kategori/Stress"));
+const Kecemasan = lazy(() => import("./pages/TestMental/Kategori/Kecemasan"));
 
 const App = () => {
   return (
@@ -35,6 +38,30 @@ const App = () => {
           element={
             <React.Suspense fallback={<Loading />}>
               <TesMental />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/tes-kesehatan-mental/depresi"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <Depresi />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/tes-kesehatan-mental/Stress"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <Stress />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/tes-kesehatan-mental/Kecemasan"
+          element={
+            <React.Suspense fallback={<Loading />}>
+              <Kecemasan />
             </React.Suspense>
           }
         />
