@@ -2,11 +2,10 @@ import React from "react";
 
 const Button = (props) => {
   return (
-    <div>
-      <button className=" bg-orange-200 py-2 px-5 rounded-full mt-4 outline hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:bg-brightGreen hover:text-white transition-all">
-        {props.title}
-      </button>
-    </div>
+    //if want to direct link to another page, add <Link>
+    <button className='inline-block px-5 py-4 text-lg font-medium lg:flex lg:text-xl hover:text-gray-600 bg-[#FF8080] hover:bg-[#ffa0a0] rounded-full' style={{ width: 'fit-content' }}>
+        <p>{props.text}</p>
+    </button>
   );
 };
 

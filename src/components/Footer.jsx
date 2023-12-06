@@ -1,13 +1,13 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo/logo-2.png";
 
 const Footer = () => {
   return (
     <footer
-      className="bg-white mt-10"
+      className="bg-white"
       style={{ boxShadow: "0 -4px 6px -1px rgba(0,0,0,0.1)" }}
     >
       <div className="mx-auto w-full max-w-screen-xl p-10 py-6 lg:py-8">

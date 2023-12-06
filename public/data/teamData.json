@@ -1,42 +1,37 @@
 [
   {
-    "imgSrc": "./src/assets/hero-1.png",
-    "title": "Ezra Jon Freddy P",
+    "name": "Ezra Jon Freddy P",
     "noId": "F152YB276",
-    "tags": ["FEBE Dev"],
+    "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/ezra-jon-freddy-pakpahan-2214a529a/",
-    "linkedInPhoto": "https://media.licdn.com/dms/image/D4D03AQG6jncE5zrrsg/profile-displayphoto-shrink_800_800/0/1699585791262?e=1706745600&v=beta&t=E_CU2OpLqM5OmxtNBFlhvygRLbRe2v2v-9jvPX4PCmM"
+    "instagramURL": ""
   },
   {
-    "imgSrc": "./src/assets/hero-1.png",
-    "title": "Inosensius G. Atok",
+    "name": "Inosensius G. Atok",
     "noId": "F631YB139",
-    "tags": ["FEBE Dev"],
+    "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/inosensius-g-atok-0ab616225/",
-    "linkedInPhoto": "https://media.licdn.com/dms/image/D5603AQE3spfVLu5Pyg/profile-displayphoto-shrink_800_800/0/1699552678984?e=1706745600&v=beta&t=V8cY2ml-UDZ_56R_qYBVStc3Uv9wuZqgG1jY8FFkOc4"
+    "instagramURL": ""
   },
   {
-    "imgSrc": "./src/assets/hero-1.png",
-    "title": "Dzikry Alfian",
+    "name": "Dzikry Alfian",
     "noId": "F225YB117",
-    "tags": ["FEBE Dev"],
+    "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/dzikry-alfian/",
-    "linkedInPhoto": "https://media.licdn.com/dms/image/D5635AQG4C-4xboSLow/profile-framedphoto-shrink_800_800/0/1698823262673?e=1701676800&v=beta&t=bU96fy3BdSwarlbkgkeHFRhQhewSfUVMVOFJ1Lx77_M"
+    "instagramURL": ""
   },
   {
-    "imgSrc": "./src/assets/hero-1.png",
-    "title": "Moh. Reyhand F",
+    "name": "Moh. Reyhand F",
     "noId": "F142YB158",
-    "tags": ["FEBE Dev"],
+    "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/mohreyhandf/",
-    "linkedInPhoto": "https://media.licdn.com/dms/image/D5603AQG98gvJ9ZE2Dg/profile-displayphoto-shrink_800_800/0/1693191097540?e=1706745600&v=beta&t=6XVFtC1GoJ-9AAFurQCcT67Hb2vkFsBCNMnBQ5Eumq0"
+    "instagramURL": "https://www.instagram.com/fart_tur/"
   },
   {
-    "imgSrc": "./src/assets/hero-1.png",
-    "title": "Nurul Nur Utami",
+    "name": "Nurul Nur Utami",
     "noId": "S283XB487",
-    "tags": ["FS Dev"],
+    "position": "FS Dev",
     "linkedInURL": "https://www.linkedin.com/in/nurul-nur-utami-0b855225a/",
-    "linkedInPhoto": "https://media.licdn.com/dms/image/D5603AQEFiIqvhNCrYg/profile-displayphoto-shrink_800_800/0/1699606034792?e=1706745600&v=beta&t=2fir1YtKLscKShQ5prX2rGYPigpghneRBQVFfK-FlVY"
+    "instagramURL": ""
   }
 ]

@@ -6,43 +6,36 @@ import hero2 from "../../../assets/psychotest.png";
 
 const Hero = () => {
   return (
-    <div className="min-h-[70vh] flex flex-col md:flex-row md:justify-between items-center md:mx-32 mx-5 mt-10">
-      <div className="md:w-2/4 text-center">
-        <p className="text-black text-4xl font-bold  mt-0 max-md:max-w-full max-md:mt-5 pt-2">
+    <div className="flex flex-col align-middle items-center justify-center p-10 lg:px-20 lg:flex-row">
+      <div className="md:w-3/4 text-center">
+        <p className="text-4xl font-bold pt-5 lg:pt-0">
           Test Kesehatan Mental-mu Bersama MentalKu !
         </p>
-        <p className="text-black text-xl mt-10">
-          Apakah kamu ingin lebih memahami kondisi kesehatan mentalmu saat ini?
-          Mari isi tes di bawah ini dan temukan hasilnya!
-        </p>
-        <div className="mt-10">
-          <Link
-            to="alur"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="hover:text-[#539165] transition-all cursor-pointer"
-          >
-            <Button title="ALUR TEST KESEHATAN MENTAL" />
-          </Link>
-          <Link
-            to="daftartest"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="hover:text-[#539165] transition-all cursor-pointer"
-          >
-            <Button title="PILIH KATEGORI TEST" />
-          </Link>
-          <Link
-            to="panduan"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="hover:text-[#539165] transition-all cursor-pointer"
-          >
-            <Button title="PANDUAN PENGISIAN TEST" />
-          </Link>
+        <div className="text-xl mt-6">
+          <p className="text-black text-xl mt-6">
+            Apakah kamu ingin lebih memahami kondisi kesehatan mentalmu saat ini?
+            Mari isi tes di bawah ini dan temukan hasilnya!
+          </p>
+          <div className="mt-3 flex flex-col justify-center items-center gap-4">
+            <Link
+              to="alur"
+              className="hover:text-[#539165] transition-all cursor-pointer"
+            >
+              <Button text="Alur Tes Kesehatan Mental" />
+            </Link>
+            <Link
+              to="daftartest"
+              className="hover:text-[#539165] transition-all cursor-pointer"
+            >
+              <Button text="Pilih Kategori Tes" />
+            </Link>
+            <Link
+              to="panduan"
+              className="hover:text-[#539165] transition-all cursor-pointer"
+            >
+              <Button text="Panduan Pengisian Tes" />
+            </Link>
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-stretch w-[50%] ml-7 max-md:w-full max-md:ml-0">

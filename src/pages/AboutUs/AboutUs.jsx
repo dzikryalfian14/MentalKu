@@ -7,10 +7,18 @@ import OurTeam from "./SubComponents/OurTeam";
 const About = () => {
   return (
     <>
-      <Jumbotron />
-      <VisiMisi />
-      <Testimoni />
-      <OurTeam />
+      <div id="jumbotron">
+        <Jumbotron />
+      </div>
+      <div id="visiMisi">
+        <VisiMisi />
+      </div>
+      <div id="testimoni">
+        <Testimoni />
+      </div>
+      <div id="ourTeam">
+        <OurTeam />
+      </div>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, startTransition } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -15,59 +15,20 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Suspense fallback={<Loading />} />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Home />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/tentang-kami"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <AboutUs />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/tes-kesehatan-mental"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <TesMental />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/tes-kesehatan-mental/depresi"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Depresi />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/tes-kesehatan-mental/Stress"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Stress />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/tes-kesehatan-mental/Kecemasan"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <Kecemasan />
-            </React.Suspense>
-          }
-        />
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tentang-kami" element={<AboutUs />} />
+          <Route path="/tes-kesehatan-mental" element={<TesMental />} />
+          <Route path="/tes-kesehatan-mental/depresi" element={<Depresi />} />
+          <Route path="/tes-kesehatan-mental/stress" element={<Stress />} />
+          <Route
+            path="/tes-kesehatan-mental/kecemasan"
+            element={<Kecemasan />}
+          />
+        </Routes>
+      </Suspense>
       <Footer />
-      <Suspense />
     </Router>
   );
 };

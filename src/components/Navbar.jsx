@@ -8,33 +8,27 @@ import icon from "../assets/logo/logo-1.png";
 const Navbar = () => {
   const path = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDoubleDropdownOpen, setIsDoubleDropdownOpen] = useState(false);
 
   const toggleNavbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleDoubleDropdown = (e) => {
-    e.stopPropagation();
-    setIsDoubleDropdownOpen(!isDoubleDropdownOpen);
-  };
-
   return (
     <nav className="bg-white shadow-lg">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-10 lg:px-30">
+      <div className="max-w-screen flex flex-wrap items-center justify-between mx-auto py-4 px-10 lg:px-20">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img srcSet={icon} className="h-12 rounded" alt={icon} />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
+          <span className="self-center font-black whitespace-nowrap text-lg lg:text-2xl">
             MentalKu
           </span>
         </Link>
         <button
           data-collapse-toggle="navbar-multi-level"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-[#FFCF96] focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="inline-flex items-center w-12 h-12 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-[#FFCF96] focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-multi-level"
           aria-expanded={isDropdownOpen}
           onClick={toggleNavbar}

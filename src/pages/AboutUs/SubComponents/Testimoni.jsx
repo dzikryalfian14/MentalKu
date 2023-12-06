@@ -9,20 +9,20 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { Pagination, FreeMode } from "swiper/modules";
 import "../../../../public/styles/swiper.scss";
+import { TestimonialCard } from "../../../components/Card/TestimonialCard";
 
 const Testimoni = () => {
   return (
-    <div className="p-32">
+    <div className="p-10 lg:px-20">
       <div className="text-center justify-center">
         <p
-          className="text-xl lg:text-4xl font-semibold lg:text-3xl pb-10"
-          style={{ textShadow: "3px 3px 3px rgba(0, 0, 0, 0.3)" }}
+          className="justify-center text-center text-2xl lg:text-3xl font-black pb-6"
         >
           Testimoni
         </p>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+          slidesPerView={3}
+          spaceBetween={35}
           freeMode={true}
           pagination={{
             clickable: true,
@@ -32,7 +32,7 @@ const Testimoni = () => {
         >
           {testimoniData.map((data, index) => (
             <SwiperSlide key={index}>
-              <CardTesti {...data} />
+              <TestimonialCard {...data} />
             </SwiperSlide>
           ))}
         </Swiper>

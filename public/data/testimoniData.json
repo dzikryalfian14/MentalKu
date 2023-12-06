@@ -3,54 +3,63 @@
     "image": "https://i.imgur.com/8Km9tLL.jpg",
     "name": "Rina",
     "location": "Jakarta",
-    "quote": "Aplikasi ini sangat membantu saya mengurangi stres dan kecemasan. Saya merasa lebih tenang dan bahagia setelah menggunakan aplikasi ini."
+    "quote": "Aplikasi ini sangat membantu saya mengurangi stres dan kecemasan. Saya merasa lebih tenang dan bahagia setelah menggunakan aplikasi ini.",
+    "rating": 4
   },
   {
     "image": "https://i.imgur.com/4QfKuz1.png",
     "name": "Andi",
     "location": "Bandung",
-    "quote": "Aplikasi ini sangat mudah digunakan dan memiliki fitur yang lengkap. Saya bisa mengatur jadwal, catatan, dan tugas saya dengan cepat dan efisien."
+    "quote": "Aplikasi ini sangat mudah digunakan dan memiliki fitur yang lengkap. Saya bisa mengatur jadwal, catatan, dan tugas saya dengan cepat dan efisien.",
+    "rating": 3
   },
   {
     "image": "https://i.imgur.com/v4cBreD.jpg",
     "name": "Lia",
     "location": "Surabaya",
-    "quote": "Aplikasi ini sangat menyenangkan dan menghibur. Saya suka dengan desain dan animasinya yang lucu dan imut. Saya juga bisa berinteraksi dengan pengguna lain dan berbagi pengalaman."
+    "quote": "Aplikasi ini sangat menyenangkan dan menghibur. Saya suka dengan desain dan animasinya yang lucu dan imut. Saya juga bisa berinteraksi dengan pengguna lain dan berbagi pengalaman.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/9w5U4nA.jpg",
     "name": "Budi",
     "location": "Yogyakarta",
-    "quote": "Aplikasi ini sangat bermanfaat untuk meningkatkan kesehatan mental saya. Saya bisa berkonsultasi dengan psikolog profesional dan mendapatkan saran yang tepat untuk masalah saya."
+    "quote": "Aplikasi ini sangat bermanfaat untuk meningkatkan kesehatan mental saya. Saya bisa berkonsultasi dengan psikolog profesional dan mendapatkan saran yang tepat untuk masalah saya.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/1OGwCgC.jpg",
     "name": "Dewi",
     "location": "Bali",
-    "quote": "Aplikasi ini sangat inspiratif dan edukatif. Saya bisa belajar banyak hal tentang kesehatan mental dan cara mengatasinya. Saya juga bisa mendapatkan tips dan trik yang praktis dan mudah diaplikasikan."
+    "quote": "Aplikasi ini sangat inspiratif dan edukatif. Saya bisa belajar banyak hal tentang kesehatan mental dan cara mengatasinya. Saya juga bisa mendapatkan tips dan trik yang praktis dan mudah diaplikasikan.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/rWYtZa6.jpg",
     "name": "Eko",
     "location": "Medan",
-    "quote": "Aplikasi ini sangat efektif dan terpercaya. Saya bisa merasakan perubahan positif dalam diri saya setelah menggunakan aplikasi ini. Saya lebih percaya diri dan optimis dalam menghadapi hidup."
+    "quote": "Aplikasi ini sangat efektif dan terpercaya. Saya bisa merasakan perubahan positif dalam diri saya setelah menggunakan aplikasi ini. Saya lebih percaya diri dan optimis dalam menghadapi hidup.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/Zs9eFfG.jpg",
     "name": "Fina",
     "location": "Makassar",
-    "quote": "Aplikasi ini sangat cocok untuk saya yang sibuk dan tidak punya waktu untuk pergi ke psikolog. Saya bisa mengakses layanan konseling kapan saja dan di mana saja. Saya juga bisa memilih psikolog yang sesuai dengan kebutuhan saya."
+    "quote": "Aplikasi ini sangat cocok untuk saya yang sibuk dan tidak punya waktu untuk pergi ke psikolog. Saya bisa mengakses layanan konseling kapan saja dan di mana saja. Saya juga bisa memilih psikolog yang sesuai dengan kebutuhan saya.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/0h2inuE.jpg",
     "name": "Gani",
     "location": "Palembang",
-    "quote": "Aplikasi ini sangat membuka mata saya tentang pentingnya kesehatan mental. Saya bisa menyadari dan mengenali gejala-gejala gangguan psikologis yang saya alami. Saya juga bisa mendapatkan bantuan yang tepat dan profesional."
+    "quote": "Aplikasi ini sangat membuka mata saya tentang pentingnya kesehatan mental. Saya bisa menyadari dan mengenali gejala-gejala gangguan psikologis yang saya alami. Saya juga bisa mendapatkan bantuan yang tepat dan profesional.",
+    "rating": 5
   },
   {
     "image": "https://i.imgur.com/3wQcKQZ.jpg",
     "name": "Hana",
     "location": "Semarang",
-    "quote": "Aplikasi ini sangat memuaskan dan memenuhi harapan saya. Saya bisa mendapatkan layanan konseling yang berkualitas dan terjangkau. Saya juga bisa mendapatkan dukungan dan motivasi dari komunitas pengguna aplikasi ini."
+    "quote": "Aplikasi ini sangat memuaskan dan memenuhi harapan saya. Saya bisa mendapatkan layanan konseling yang berkualitas dan terjangkau. Saya juga bisa mendapatkan dukungan dan motivasi dari komunitas pengguna aplikasi ini.",
+    "rating": 5
   }
 ]
