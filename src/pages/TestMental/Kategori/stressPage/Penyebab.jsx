@@ -2,7 +2,7 @@ import React from "react"
 
 const Penyebab = () => {
     return (
-      <div className="my-36">
+      <div className="mt-32 mb-48">
         <h1 className="text-2xl font-extrabold mt-10 mb-10 text-center px-8">Penyebab Stress</h1>
         <div className='flex flex-wrap justify-center gap-14 px-10 max-lg:gap-5 '>
           <div className="grid justify-start gap-y-5">
