@@ -28,7 +28,7 @@ const DaftarTest = () => {
         />
         <DaftarCard
           link="stress"
-          way="kecemasan"
+          way="stress"
           img={img3}
           title="Stress"
           para="Stress dapat timbul dari tuntutan harian yang berlebihan. Gejala stres melibatkan perasaan tegang dan sulit berkonsentrasi. Tes ini akan membantu mengidentifikasi tingkat stres Anda."

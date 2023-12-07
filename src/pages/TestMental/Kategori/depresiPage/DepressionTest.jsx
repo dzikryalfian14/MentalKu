@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import quizData from '../../../../public/data/pertanyaan.json';
-import recomendationData from '../../../../public/data/Recomendation.json';
+import quizData from '../../../../../public/data/pertanyaan.json';
+import recomendationData from '../../../../../public/data/Recomendation.json';
 
-import '../../../index.css';
-import '../../../styles/Test.css';
+import '../../../../../src/index.css';
+import '../../../../styles/Test.css';
 
 // import 'tailwindcss/base';
 // import 'tailwindcss/components';
