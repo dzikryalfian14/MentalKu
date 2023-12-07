@@ -17,7 +17,15 @@ const StressTest = () => {
     const [stressDesign, setStressDesign] = useState("");
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalSubmit, setIsModalSubmit] = useState(false);
+
     const [isNext, setIsNext] = useState(``);
+
+    window.onbeforeunload = function (event) {
+      const confirmationMessage =
+        "Apakah Anda yakin ingin keluar sebelum menyelesaikan tes?";
+      return confirmationMessage;
+    };
 
     const handleAnswerChange = (questionIndex, value) => {
         const newAnswers = [...answers];
@@ -25,9 +33,9 @@ const StressTest = () => {
         setAnswers(newAnswers);
     };
 
-  const handleNextQuestion = () => {
+ const handleNextQuestion = () => {
     if (answers[currentQuestionIndex] === null) {
-      setIsModalOpen(true);
+      setIsModalAnswer(true);
       return;
     }
 
@@ -38,12 +46,20 @@ const StressTest = () => {
       setIsNext(``);
     }
 
-    // jika sudah menjawab semua pertanyaan, hitung skor
+    if (currentQuestionIndex >= -1) {
+      setIsNext(`Lanjutkan`);
+    }
+
     if (currentQuestionIndex === quizData.questions_depresi.length - 2) {
       setIsNext(`Submit`);
-      calculateScore();
+    }
+    // jika sudah menjawab semua pertanyaan, hitung skor
+    if (currentQuestionIndex === quizData.questions_depresi.length - 1) {
+      setIsModalSubmit(true);
+      return;
     }
   };
+
 
     const calculateScore = () => {
         const totalScore = answers.reduce((acc, value) => acc + value, 0);
@@ -97,11 +113,11 @@ let questions = [];
     }
   }
 
-    .typing-animation {
-      overflow: hidden;
-      white-space: wrap;
-      animation: typing 2s steps(20, end);
-  }
+  .typing-animation {
+    overflow: none;
+    white-space: none;
+    animation: none;
+}
 
   @media only screen and (min-width: 1200px){
     .typing-animation{
@@ -133,9 +149,9 @@ let questions = [];
           </h2>
         )}
 
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={() => setIsModalOpen(false)}
+<Modal
+          isOpen={isModalAnswer}
+          onRequestClose={() => setIsModalAnswer(false)}
           contentLabel="Example Modal"
           style={modalStyles}
         >
@@ -146,9 +162,41 @@ let questions = [];
             </p>
             <button
               className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => setIsModalAnswer(false)}
             >
               Tutup
+            </button>
+          </div>
+        </Modal>
+
+        <Modal
+          isOpen={isModalSubmit}
+          onRequestClose={() => setIsModalSubmit(false)}
+          contentLabel="Example Modal"
+          style={modalStyles}
+        >
+          <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="text-red-500 text-2x1 font-bold">Peringatan!</h2>
+            <p className="text-black mt-3">
+              Apakah anda yakin semua jawaban terisi dengan baik dan jujur?
+            </p>
+            <button
+              className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
+              onClick={() => {
+                setIsModalSubmit(false);
+                handlePreviousQuestion();
+              }}
+            >
+              Tidak
+            </button>
+            <button
+              className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
+              onClick={() => {
+                calculateScore();
+                setIsModalSubmit(false);
+              }}
+            >
+              Yakin
             </button>
           </div>
         </Modal>
