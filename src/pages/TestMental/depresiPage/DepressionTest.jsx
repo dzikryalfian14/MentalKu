@@ -16,8 +16,16 @@ const DepressionTest = () => {
 
   const [depressionDesign, setDepressionDesign] = useState("");
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalAnswer, setIsModalAnswer] = useState(false);
+  const [isModalSubmit, setIsModalSubmit] = useState(false);
+
   const [isNext, setIsNext] = useState(``);
+
+  window.onbeforeunload = function (event) {
+    const confirmationMessage =
+      "Apakah Anda yakin ingin keluar sebelum menyelesaikan tes?";
+    return confirmationMessage;
+  };
 
   const handleAnswerChange = (questionIndex, value) => {
     const newAnswers = [...answers];
@@ -27,11 +35,12 @@ const DepressionTest = () => {
 
   const handlePreviousQuestion = () => {
     setCurrentQuestionIndex(currentQuestionIndex - 1);
+    setIsNext(``);
   };
 
   const handleNextQuestion = () => {
     if (answers[currentQuestionIndex] === null) {
-      setIsModalOpen(true);
+      setIsModalAnswer(true);
       return;
     }
 
@@ -42,10 +51,17 @@ const DepressionTest = () => {
       setIsNext(``);
     }
 
-    // jika sudah menjawab semua pertanyaan, hitung skor
+    if (currentQuestionIndex >= -1) {
+      setIsNext(`Lanjutkan`);
+    }
+
     if (currentQuestionIndex === quizData.questions_depresi.length - 2) {
       setIsNext(`Submit`);
-      calculateScore();
+    }
+    // jika sudah menjawab semua pertanyaan, hitung skor
+    if (currentQuestionIndex === quizData.questions_depresi.length - 1) {
+      setIsModalSubmit(true);
+      return;
     }
   };
 
@@ -102,14 +118,16 @@ const DepressionTest = () => {
   }
 
     .typing-animation {
-      overflow: hidden;
-      white-space: wrap;
-      animation: typing 2s steps(20, end);
+      overflow: none;
+      white-space: none;
+      animation: none;
   }
 
   @media only screen and (min-width: 1200px){
     .typing-animation{
+      overflow: hidden;
       white-space: nowrap;
+      animation: typing 2s steps(20, end);
     }
   }
 `;
@@ -137,8 +155,8 @@ const DepressionTest = () => {
         )}
 
         <Modal
-          isOpen={isModalOpen}
-          onRequestClose={() => setIsModalOpen(false)}
+          isOpen={isModalAnswer}
+          onRequestClose={() => setIsModalAnswer(false)}
           contentLabel="Example Modal"
           style={modalStyles}
         >
@@ -149,9 +167,41 @@ const DepressionTest = () => {
             </p>
             <button
               className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => setIsModalAnswer(false)}
             >
               Tutup
+            </button>
+          </div>
+        </Modal>
+
+        <Modal
+          isOpen={isModalSubmit}
+          onRequestClose={() => setIsModalSubmit(false)}
+          contentLabel="Example Modal"
+          style={modalStyles}
+        >
+          <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="text-red-500 text-2x1 font-bold">Peringatan!</h2>
+            <p className="text-black mt-3">
+              Apakah anda yakin semua jawaban terisi dengan baik dan jujur?
+            </p>
+            <button
+              className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
+              onClick={() => {
+                setIsModalSubmit(false);
+                handlePreviousQuestion();
+              }}
+            >
+              Tidak
+            </button>
+            <button
+              className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
+              onClick={() => {
+                calculateScore();
+                setIsModalSubmit(false);
+              }}
+            >
+              Yakin
             </button>
           </div>
         </Modal>
@@ -168,7 +218,8 @@ const DepressionTest = () => {
                 <button
                   key={optionIndex}
                   className={`w-64 h-17 border rounded-md shadow-sm justify-center m-5 text-rose-600  text-justify text-2xl border-rose-600 shadow-sm bg-white grow items-stretch px-8 py-5 rounded-md border-solid border-black max-md:px-10 ${
-                    answers[currentQuestionIndex] === quizData.questions_depresi[currentQuestionIndex].value[
+                    answers[currentQuestionIndex] ===
+                    quizData.questions_depresi[currentQuestionIndex].value[
                       optionIndex
                     ]
                       ? "border-4" //active
@@ -215,9 +266,22 @@ const DepressionTest = () => {
               <button
                 onClick={handleNextQuestion}
                 className="text-white text-center text-3xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10 max-md:px-5"
-              >{isNext}
-                <svg className="w-6 h-6 text-white-800 dark:text-white"aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
+              >
+                {isNext}
+                <svg
+                  className="w-6 h-6 text-white-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 8 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="5"
+                    d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                  />
                 </svg>
               </button>
             </div>
