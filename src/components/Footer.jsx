@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo/logo-2.png";
 
 const Footer = () => {
+  const path = useLocation();
+
+  // Set document scroll to top when pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [path.pathname]);
+
   return (
     <footer
       className="bg-white"
@@ -15,7 +22,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <img srcSet={logo} className="h-20 me-3" alt="MentalKu Logo" />
-              <span className="pe-5 self-start text-3xl font-semibold whitespace-nowrap">
+              <span className="pe-5 self-start text-2xl lg:text-3xl font-semibold whitespace-nowrap">
                 MentalKu
               </span>
             </Link>
@@ -28,6 +35,9 @@ const Footer = () => {
               <div className="text-gray-500 font-medium flex flex-col">
                 <Link to="/" className="hover:underline mb-4">
                   Beranda
+                </Link>
+                <Link to="/tes-kesehatan-mental" className="hover:underline mb-4">
+                  Tes Kesehatan Mental
                 </Link>
                 <Link to="/tentang-kami" className="hover:underline mb-4">
                   Tentang Kami

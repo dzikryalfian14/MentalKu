@@ -14,7 +14,7 @@ export function TestimonialCard(props) {
     stars.push(<FaStar key={i} className="text-yellow-500" />);
   }
   return (
-    <Card color="transparent" shadow={false} className="w-full rounded-xl h-50 bg-[#F6FDC3] p-4">
+    <Card color="transparent" shadow={false} className="w-full rounded-xl h-50 bg-[#CDFAD5] p-4">
       <CardHeader
         color="transparent"
         floated={false}

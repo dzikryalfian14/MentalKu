@@ -1,13 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #ff8080;
+  --sb-size: 8px;
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   color: #222831;
-  font-family: 'Inter', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin-left: 80px;
   margin-right: 80px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
 }
 
 @media (max-width: 768px) {
