@@ -5,7 +5,7 @@ import hero1 from "../../assets/hero-1.png";
 import hero2 from "../../assets/hero-2.png";
 import ReasonCard from "./SubComponents/ReasonCard";
 import HeadingReason from "./SubComponents/HeadingReason";
-import Button from "../../layout/Button";
+import ButtonTemplate from "../../layout/ButtonTemplate";
 
 const Home = () => {
   const reasons = [
@@ -66,7 +66,7 @@ const Home = () => {
                 to="/tes-kesehatan-mental"
                 alt="Coba Deh Direct Tex Kesehatan Mental"
               >
-                <Button text={"Coba Deh!"} />
+                <ButtonTemplate text={"Coba Deh!"} />
               </Link>
             </div>
           </div>

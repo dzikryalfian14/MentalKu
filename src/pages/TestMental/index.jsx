@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { MdCancel } from "react-icons/md";
 import hero2 from "../../assets/psychotest.png";
-import Button from "../../layout/Button";
+import ButtonTemplate from "../../layout/ButtonTemplate";
 import AlurCard from "../../layout/AlurCard";
 import DaftarCard from "../../layout/DaftarCard";
 
@@ -9,44 +10,59 @@ import imgDepresi from "../../assets/depresi.png";
 import imgStress from "../../assets/stress.png";
 import imgPanduan from "../../assets/panduan.png";
 import { Link } from "react-router-dom";
+import {
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Button,
+} from "@material-tailwind/react";
 
 const TestMental = () => {
+  const [size, setSize] = React.useState(null);
+
+  const handleOpen = (value) => {
+    if (value === "xxl") {
+      setSize(value);
+    }
+  };
+
   return (
     <>
       <div id="hero">
-        <div className="flex flex-col align-middle items-center justify-center p-10 lg:px-20 lg:flex-row">
-          <div className="md:w-3/4 text-center">
-            <p className="text-4xl font-bold pt-5 lg:pt-0">
+        <div className="flex flex-col-reverse align-middle items-center justify-center p-10 lg:px-20 lg:flex-row gap-12">
+          <div className="min-w-30 w-auto max-w-72 text-center">
+            <p className="text-2xl lg:text-3xl font-black pb-6">
               Test Kesehatan Mental-mu Bersama MentalKu !
             </p>
-            <div className="text-xl mt-6">
-              <p className="text-black text-xl mt-6">
+            <div className="text-xl">
+              <p className="text-black text-xl leading-loose">
                 Apakah kamu ingin lebih memahami kondisi kesehatan mentalmu saat
                 ini? Mari isi tes di bawah ini dan temukan hasilnya!
               </p>
               <div className="mt-3 flex flex-col justify-center items-center gap-4">
-                <Link
-                  to="alur"
+                <a
+                  href="#alur"
                   className="hover:text-[#539165] transition-all cursor-pointer"
                 >
-                  <Button text="Alur Tes Kesehatan Mental" />
-                </Link>
-                <Link
-                  to="daftartest"
+                  <ButtonTemplate text="Alur Tes Kesehatan Mental" />
+                </a>
+                <a
+                  onClick={() => handleOpen("xxl")}
                   className="hover:text-[#539165] transition-all cursor-pointer"
                 >
-                  <Button text="Pilih Kategori Tes" />
-                </Link>
-                <Link
-                  to="panduan"
+                  <ButtonTemplate text="Pilih Kategori Tes" />
+                </a>
+                <a
+                  href="#panduan"
                   className="hover:text-[#539165] transition-all cursor-pointer"
                 >
-                  <Button text="Panduan Pengisian Tes" />
-                </Link>
+                  <ButtonTemplate text="Panduan Pengisian Tes" />
+                </a>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[50%] ml-7 max-md:w-full max-md:ml-0">
+          <div className="flex flex-col items-stretch min-w-30 w-auto max-w-[50%]">
             <img
               loading="lazy"
               srcSet={hero2}
@@ -57,11 +73,11 @@ const TestMental = () => {
         </div>
       </div>
       <div id="alur">
-        <div className="min-h-[80vh] flex flex-col items-center justify-center md:px-32 px-5">
-          <p className="text-black text-3xl font-bold mt-24 max-md:max-w-full max-md:mt-5 pt-2">
+        <div className="flex flex-col items-center justify-center p-10 lg:px-20">
+          <p className="text-2xl lg:text-3xl font-black pb-6">
             Alur Test Kesehatan Mental
           </p>
-          <div className=" flex flex-col lg:flex-row gap-5 mt-20">
+          <div className="flex flex-col lg:flex-row gap-5">
             <AlurCard
               img={imgCemas}
               title="Pilih Kategori Tes"
@@ -81,38 +97,52 @@ const TestMental = () => {
         </div>
       </div>
       <div id="daftar-test">
-        <div className="min-h-[70vh] flex flex-col items-center justify-center md:px-32 px-5">
-          <p className="text-black text-3xl font-bold mt-14 max-md:max-w-full max-md:mt-5 pt-2">
-            Daftar Kategori Test Kesehatan Mental
-          </p>
-          <div className="flex flex-col lg:flex-row gap-5 mt-14">
-            <DaftarCard
-              link="kecemasan"
-              way="kecemasan"
-              img={imgCemas}
-              title="Kecemasan"
-              para="Kecemasan melibatkan ketakutan yang berlebihan dan rasa khawatir yang terus-menerus. Tes ini dirancang untuk membantu Anda mengenali apakah kecemasan mungkin memengaruhi kesejahteraan mental Anda."
-            />
-            <DaftarCard
-              link="depresi"
-              way="depresi"
-              img={imgDepresi}
-              title="Depresi"
-              para="Stress dapat timbul dari tuntutan harian yang berlebihan. Gejala stres melibatkan perasaan tegang dan sulit berkonsentrasi. Tes ini akan membantu mengidentifikasi tingkat stres Anda."
-            />
-            <DaftarCard
-              link="stress"
-              way="stress"
-              img={imgStress}
-              title="Stress"
-              para="Stress dapat timbul dari tuntutan harian yang berlebihan. Gejala stres melibatkan perasaan tegang dan sulit berkonsentrasi. Tes ini akan membantu mengidentifikasi tingkat stres Anda."
-            />
-          </div>
+        <div className="flex flex-col items-center justify-center p-10 lg:px-12">
+          <>
+            <Dialog
+              open={size === "xxl"}
+              size={size}
+              handler={() => setSize(null)}
+            >
+              <DialogHeader className="flex text-4xl justify-center">
+                <p>Daftar Kategori Test Kesehatan Mental</p>
+                <button  className="ml-auto" onClick={() => setSize(null)}>
+                  <MdCancel />
+                </button>
+              </DialogHeader>
+              <hr />
+              <DialogBody className="">
+                <div className="flex flex-wrap lg:flex-row gap-20 justify-center">
+                  <DaftarCard
+                    link="kecemasan"
+                    way="kecemasan"
+                    img={imgCemas}
+                    title="Kecemasan"
+                    para="Kecemasan melibatkan ketakutan yang berlebihan dan rasa khawatir yang terus-menerus. Tes ini dirancang untuk membantu Anda mengenali apakah kecemasan mungkin memengaruhi kesejahteraan mental Anda."
+                  />
+                  <DaftarCard
+                    link="depresi"
+                    way="depresi"
+                    img={imgDepresi}
+                    title="Depresi"
+                    para="Stress dapat timbul dari tuntutan harian yang berlebihan. Gejala stres melibatkan perasaan tegang dan sulit berkonsentrasi. Tes ini akan membantu mengidentifikasi tingkat stres Anda."
+                  />
+                  <DaftarCard
+                    link="stress"
+                    way="stress"
+                    img={imgStress}
+                    title="Stress"
+                    para="Stress dapat timbul dari tuntutan harian yang berlebihan. Gejala stres melibatkan perasaan tegang dan sulit berkonsentrasi. Tes ini akan membantu mengidentifikasi tingkat stres Anda."
+                  />
+                </div>
+              </DialogBody>
+            </Dialog>
+          </>
         </div>
       </div>
       <div id="panduan">
-        <div className="min-h-[80vh] flex flex-col md:flex-row items-center justify-center md:px-32 px-5 mt-14 ">
-          <div className="md:w-[50%] max-md:w-full max-md:mt-10 flex items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center p-10 lg:px-20 gap-5 lg:gap-16">
+          <div className="min-w-30 w-auto max-w-56 flex items-center">
             <img
               loading="lazy"
               srcSet={imgPanduan}
@@ -120,11 +150,11 @@ const TestMental = () => {
               alt="Image"
             />
           </div>
-          <div className="md:w-[50%] max-md:w-full max-md:mt-5 pr-5">
-            <p className="text-black text-3xl text-justify font-bold max-md:max-w-full mb-10 ml-5">
+          <div className="w-auto lg:w-2/3">
+            <p className="text-black text-3xl text-justify font-bold max-md:max-w-full mb-6">
               Panduan Test Mental
             </p>
-            <ul className="list-decimal text-justify ml-5 pl-3">
+            <ul className="list-decimal text-justify leading-loose">
               <li className="mb-2">
                 Tidak ada jawaban yang benar atau salah. Silakan pilih jawaban
                 yang menggambarkan kondisi kamu sebenar-benarnya.
@@ -155,8 +185,8 @@ const TestMental = () => {
         </div>
       </div>
       <div id="disclaimer">
-        <div className="text-center max-w-prose mx-auto my-auto ">
-          <h1 className="text-3xl font-bold mb-4">Disclaimer</h1>
+        <div className="text-center max-w-prose mx-auto my-auto lg:py-10">
+          <h1 className="text-3xl font-bold mb-6">Disclaimer</h1>
           <p className="text-gray-700 leading-loose">
             Jika Anda sedang mengalami krisis psikologis yang mengancam hidup
             Anda, layanan ini tidak direkomendasikan. Segera hubungi nomor
