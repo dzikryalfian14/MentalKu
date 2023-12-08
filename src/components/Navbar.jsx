@@ -14,11 +14,11 @@ const Navbar = () => {
       case "/":
         return "";
       case "/tentang-kami":
-        return "- About Us";
+        return "- Tentang Kami";
       case "/tes-kesehatan-mental":
-        return "- Mental Health Test";
+        return "- Tes Kesehatan Mental";
       default:
-        return "- Page Not Found";
+        return "- Halaman tidak ditemukan";
     }
   };
 

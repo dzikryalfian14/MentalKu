@@ -1,43 +1,34 @@
 import React from "react";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const DaftarCard = (props) => {
   return (
-    <div className="max-w-sm bg-white rounded-lg shadow hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="max-w-sm bg-white rounded-lg shadow hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] py-5 px-5 lg:py-8 lg:px-12">
       <Link
         to={props.link}
         duration={500}
         className="flex items-center justify-center"
       >
-        <img className="h-56 w-56 m-5 mt-7" src={props.img} alt="img" />
+        <img
+          className="h-auto max-h-56 w-auto max-w-56 mb-6"
+          src={props.img}
+          alt="img"
+        />
       </Link>
-      <div className="p-5">
+      <div className="">
         <Link to={props.link}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-center">
+          <h5 className="mb-3 text-2xl font-bold tracking-tight text-center">
             {props.title}
           </h5>
         </Link>
-        <p className="mb-3 font-normal text-justify mt-5 ">{props.para}</p>
+        <p className="mb-3 font-normal text-justify leading-loose">{props.para}</p>
         <Link
           to={props.way}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Baca Selengkapnya
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
+          <FaLongArrowAltRight className="ml-2" />
         </Link>
       </div>
     </div>
