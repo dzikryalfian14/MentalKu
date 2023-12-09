@@ -9,12 +9,12 @@ import ButtonTemplate from "../../layout/ButtonTemplate";
 
 const Home = () => {
   const reasons = [
-    "Peningkatan Kecerdasan",
-    "Peningkatan Angka Gangguan Mental",
-    "Tautan Hidup Modern",
-    "Kecenderungan Generasi Muda",
-    "Tantangan Kesehatan Mental di Tempat Kerja",
-    "Deskriminasi Stigma",
+    "MentalKu menyediakan latihan dan panduan yang didesain untuk meningkatkan pemahaman dan pengelolaan emosi, membantu Anda mengembangkan kecerdasan emosional yang lebih baik.",
+    "MentalKu bertujuan untuk meningkatkan pemahaman tentang berbagai gangguan mental, membantu mengurangi stigma, dan mendorong pencarian pertolongan lebih awal.",
+    "MentalKu memberikan solusi yang dapat diakses secara mudah dan fleksibel, cocok untuk gaya hidup modern.",
+    "MentalKu menyajikan informasi dan panduan dengan pendekatan yang sesuai dengan kebutuhan dan preferensi generasi muda, dengan konten yang relevan dan presentasi yang menarik.",
+    "MentalKu menawarkan strategi khusus untuk mengelola stres di tempat kerja, meningkatkan produktivitas, dan menciptakan lingkungan yang mendukung kesejahteraan mental",
+    "MentalKu berkomitmen untuk menghadapi stigma dengan menyediakan informasi mendalam, menyampaikan cerita sukses, dan menciptakan komunitas yang mendukung di dalam aplikasi untuk mengatasi presepsi negatif terkait kesehatan mental.",
   ];
   return (
     <>
