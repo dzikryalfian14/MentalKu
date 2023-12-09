@@ -1,8 +1,8 @@
-import React from 'react'
-import Hero from './stressPage/hero'
-import Penyebab from './stressPage/penyebab'
-import Dampak from './stressPage/dampak'
-import Tes from './stressPage/tes'
+import React from "react";
+import Hero from "./stressPage/hero";
+import Penyebab from "./stressPage/penyebab";
+import Dampak from "./stressPage/dampak";
+import Tes from "./stressPage/tes";
 
 const Stress = () => {
   return (
@@ -12,7 +12,7 @@ const Stress = () => {
       <Dampak />
       <Tes />
     </div>
-  )
-}
+  );
+};
 
-export default Stress
+export default Stress;

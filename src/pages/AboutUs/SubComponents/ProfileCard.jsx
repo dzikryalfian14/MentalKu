@@ -11,7 +11,10 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 export function ProfileCard(props) {
   return (
     <Card className="w-full py-5 bg-[#CDFAD5]">
-      <CardHeader floated={false} className="h-auto max-h-80 px-3 bg-inherit shadow-none">
+      <CardHeader
+        floated={false}
+        className="h-auto max-h-80 px-3 bg-inherit shadow-none"
+      >
         <img
           src={`./src/assets/teams/${props.noId}-photo.png`}
           alt={`${props.name}-picture`}

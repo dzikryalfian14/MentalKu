@@ -66,7 +66,7 @@ const Home = () => {
                 to="/tes-kesehatan-mental"
                 alt="Coba Deh Direct Tex Kesehatan Mental"
               >
-                <ButtonTemplate text={"Coba Deh!"} />
+                <ButtonTemplate text={"Coba Sekarang"} />
               </Link>
             </div>
           </div>

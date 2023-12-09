@@ -14,7 +14,7 @@ const Tes = () => {
   return (
     <div className="p-16">
       <div className="text-center text-lg font-bold">
-        Untuk mengetahui kondisi kecemasan, silahkan ikuti tes!!
+        Untuk mengetahui kondisi anda pada saat ini, silahkan ikuti berikut
       </div>
       <div className="flex justify-center">
         <button
@@ -33,7 +33,9 @@ const Tes = () => {
         overlayClassName="overlay fixed top-0 left-0 right-0 bottom-0"
       >
         <div className="content text-center">
-          <p className="mb-4 text-lg">Apakah Anda yakin ingin melakukan tes kecemasan ?</p>
+          <p className="mb-4 text-lg">
+            Apakah Anda yakin ingin melakukan tes kecemasan ?
+          </p>
           <div className="flex justify-center">
             <button
               onClick={() => setModalIsOpen(false)}

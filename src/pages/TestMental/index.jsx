@@ -106,7 +106,7 @@ const TestMental = () => {
             >
               <DialogHeader className="flex text-4xl justify-center">
                 <p>Daftar Kategori Test Kesehatan Mental</p>
-                <button  className="ml-auto" onClick={() => setSize(null)}>
+                <button className="ml-auto" onClick={() => setSize(null)}>
                   <MdCancel />
                 </button>
               </DialogHeader>

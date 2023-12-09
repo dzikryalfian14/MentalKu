@@ -135,43 +135,42 @@
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 9,
       "question": "Apakah anda merasa hilang harapan dan putus asa?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 10,
       "question": "Apakah anda sulit untuk antusias pada banyak hal?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 11,
       "question": "Apakah anda merasa tidak berharga?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 12,
       "question": "Apakah anda merasa tidak ada harapan untuk masa depan?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 13,
       "question": "Apakah anda merasa hidup tidak berarti?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     },
-        {
+    {
       "id": 14,
       "question": "Apakah anda kesulitan untuk meningkatkan inisiatif dalam melakukan sesuatu?",
       "options": ["Tidak Pernah", "Kadang-kadang", "Sering", "Selalu"],
       "value": [0, 1, 2, 3]
     }
-    
   ],
 
   "questions_stress": [

@@ -36,7 +36,10 @@ const Footer = () => {
                 <Link to="/" className="hover:underline mb-4">
                   Beranda
                 </Link>
-                <Link to="/tes-kesehatan-mental" className="hover:underline mb-4">
+                <Link
+                  to="/tes-kesehatan-mental"
+                  className="hover:underline mb-4"
+                >
                   Tes Kesehatan Mental
                 </Link>
                 <Link to="/tentang-kami" className="hover:underline mb-4">

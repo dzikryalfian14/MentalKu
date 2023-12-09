@@ -7,33 +7,33 @@ import Modal from "react-modal";
 Modal.setAppElement("#root");
 
 const StressTest = () => {
-    const [answers, setAnswers] = useState(
-        new Array(quizData.questions_stress.length).fill(null),
-    );
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [stressCategory, setStressCategory] = useState("");
-    const [stressRecomendation, setStressRecomendation] = useState([]);
+  const [answers, setAnswers] = useState(
+    new Array(quizData.questions_stress.length).fill(null),
+  );
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [stressCategory, setStressCategory] = useState("");
+  const [stressRecomendation, setStressRecomendation] = useState([]);
 
-    const [stressDesign, setStressDesign] = useState("");
+  const [stressDesign, setStressDesign] = useState("");
 
-    const [isModalAnswer, setIsModalOpen] = useState(false);
-    const [isModalSubmit, setIsModalSubmit] = useState(false);
+  const [isModalAnswer, setIsModalOpen] = useState(false);
+  const [isModalSubmit, setIsModalSubmit] = useState(false);
 
-    const [isNext, setIsNext] = useState(``);
+  const [isNext, setIsNext] = useState(``);
 
-    window.onbeforeunload = function (event) {
-      const confirmationMessage =
-        "Apakah Anda yakin ingin keluar sebelum menyelesaikan tes?";
-      return confirmationMessage;
-    };
+  window.onbeforeunload = function (event) {
+    const confirmationMessage =
+      "Apakah Anda yakin ingin keluar sebelum menyelesaikan tes?";
+    return confirmationMessage;
+  };
 
-    const handleAnswerChange = (questionIndex, value) => {
-        const newAnswers = [...answers];
-        newAnswers[questionIndex] = value;
-        setAnswers(newAnswers);
-    };
+  const handleAnswerChange = (questionIndex, value) => {
+    const newAnswers = [...answers];
+    newAnswers[questionIndex] = value;
+    setAnswers(newAnswers);
+  };
 
- const handleNextQuestion = () => {
+  const handleNextQuestion = () => {
     if (answers[currentQuestionIndex] === null) {
       setIsModalAnswer(true);
       return;
@@ -60,47 +60,46 @@ const StressTest = () => {
     }
   };
 
+  const calculateScore = () => {
+    const totalScore = answers.reduce((acc, value) => acc + value, 0);
 
-    const calculateScore = () => {
-        const totalScore = answers.reduce((acc, value) => acc + value, 0);
+    let data = recomendationData;
 
-        let data = recomendationData;
+    // logika penilaian stress
+    if (totalScore >= 0 && totalScore <= 14) {
+      setStressCategory("NORMAL");
+      setStressRecomendation(data.normal_stress);
+      setStressDesign(
+        "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
+      );
+    } else if (totalScore >= 15 && totalScore <= 18) {
+      setStressCategory("RINGAN");
+      setStressRecomendation(data.ringan_stress);
+      setStressDesign(
+        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
+      );
+    } else if (totalScore >= 19 && totalScore <= 25) {
+      setStressCategory("SEDANG");
+      setStressRecomendation(data.sedang_stress);
+      setStressDesign(
+        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
+      );
+    } else if (totalScore >= 26 && totalScore <= 33) {
+      setStressCategory("PARAH");
+      setStressRecomendation(data.parah_stress);
+      setStressDesign(
+        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
+      );
+    } else if (totalScore > 34) {
+      setStressCategory("SANGAT PARAH");
+      setStressRecomendation(data["sangat-parah_stress"]);
+      setStressDesign(
+        "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
+      );
+    }
+  };
 
-        // logika penilaian stress
-        if (totalScore >= 0 && totalScore <= 14) {
-            setStressCategory("NORMAL");
-            setStressRecomendation(data.normal_stress);
-            setStressDesign(
-                "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
-            );
-        } else if (totalScore >= 15 && totalScore <= 18) {
-            setStressCategory("RINGAN");
-            setStressRecomendation(data.ringan_stress);
-            setStressDesign(
-                "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
-            );
-        } else if (totalScore >= 19 && totalScore <= 25) {
-            setStressCategory("SEDANG");
-            setStressRecomendation(data.sedang_stress);
-            setStressDesign(
-                "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
-            );
-        } else if (totalScore >= 26 && totalScore <= 33) {
-            setStressCategory("PARAH");
-            setStressRecomendation(data.parah_stress);
-            setStressDesign(
-                "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
-            );
-        } else if (totalScore > 34) {
-            setStressCategory("SANGAT PARAH");
-            setStressRecomendation(data["sangat-parah_stress"]);
-            setStressDesign(
-                "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 self-center mt-5 px-1 py-1.3 max-md:3 max-md:text-4xl max-md:mt-10",
-            );
-        }
-    };
-
-let questions = [];
+  let questions = [];
   questions = quizData.questions_depresi;
 
   const style = `
@@ -137,9 +136,8 @@ let questions = [];
     },
   };
 
-
-    return (
-        <>
+  return (
+    <>
       <style>{style}</style>
       <div className="m-10 border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-black max-md:max-w-full max-md:my-10 max-md:px-20">
         {currentQuestionIndex < quizData.questions_stress.length && (
@@ -149,7 +147,7 @@ let questions = [];
           </h2>
         )}
 
-<Modal
+        <Modal
           isOpen={isModalAnswer}
           onRequestClose={() => setIsModalAnswer(false)}
           contentLabel="Example Modal"
@@ -213,7 +211,8 @@ let questions = [];
                 <button
                   key={optionIndex}
                   className={`w-64 h-17 rounded-md border shadow-sm justify-center m-5 text-black-400 text-justify text-2xl border shadow-sm bg-white grow items-stretch px-8 py-5 rounded-md border-solid border-black max-md:px-10 ${
-                    answers[currentQuestionIndex] === quizData.questions_stress[currentQuestionIndex].value[
+                    answers[currentQuestionIndex] ===
+                    quizData.questions_stress[currentQuestionIndex].value[
                       optionIndex
                     ]
                       ? "border-4" //active
@@ -260,9 +259,22 @@ let questions = [];
               <button
                 onClick={handleNextQuestion}
                 className="text-white text-center text-3xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10 max-md:px-5"
-              >{isNext}
-                <svg className="w-6 h-6 text-white-800 dark:text-white"aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
+              >
+                {isNext}
+                <svg
+                  className="w-6 h-6 text-white-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 8 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="5"
+                    d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                  />
                 </svg>
               </button>
             </div>

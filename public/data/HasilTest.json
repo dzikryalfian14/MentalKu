@@ -1,21 +1,20 @@
 {
-    "hasil_test": {
-      "stres": {
-        "ringan": "Anda mungkin mengalami stres sehari-hari yang umum, seperti tekanan pekerjaan atau tuntutan kehidupan sehari-hari. Strategi pengelolaan stres sederhana, seperti berolahraga ringan atau melibatkan diri dalam aktivitas yang menyenangkan, dapat membantu mengurangi dampak stres ini. MentalKu menyediakan panduan praktis dan latihan khusus untuk membantu Anda mengatasi stres sehari-hari.",
-        "sedang": "Jika hasil tes menunjukkan tingkat stres sedang, ini bisa menjadi tanda bahwa stres yang Anda alami memerlukan perhatian lebih serius. MentalKu dapat membantu Anda mengidentifikasi sumber stres dan menyediakan panduan yang lebih mendalam untuk mengatasi situasi ini. Pertimbangkan juga untuk berkonsultasi dengan seorang profesional kesehatan mental untuk dukungan lebih lanjut.",
-        "berat": "Hasil stres berat mungkin menandakan bahwa Anda sedang mengalami tingkat stres yang signifikan dan merusak. Diperlukan intervensi segera, dan kami sangat menyarankan Anda untuk mencari bantuan dari konsultan psikologi atau terapis yang dapat memberikan dukungan terapeutik dan membantu Anda mengembangkan strategi pengelolaan stres yang lebih intensif."
-      },
-      "kecemasan": {
-        "ringan": "Kecemasan ringan mungkin terkait dengan situasi tertentu dan dapat diatasi dengan teknik relaksasi sederhana. MentalKu menyediakan panduan untuk mengatasi kecemasan sehari-hari dan membantu Anda mengidentifikasi cara-cara untuk mengelola perasaan cemas.",
-        "sedang": "Kecemasan sedang mungkin memerlukan pendekatan yang lebih terstruktur. Aplikasi MentalKu dapat memberikan latihan khusus dan saran untuk membantu Anda mengatasi kecemasan. Pertimbangkan juga untuk mencari dukungan profesional, seperti konseling atau terapi kognitif.",
-        "berat": "Kecemasan berat memerlukan perhatian segera. MentalKu dapat memberikan panduan awal, namun sangat disarankan untuk berkonsultasi dengan seorang profesional kesehatan mental yang dapat menilai dan memberikan dukungan yang sesuai, mungkin termasuk terapi obat atau terapi terapeutik intensif."
-      },
-      "depresi": {
-        "ringan": "Gejala depresi ringan mungkin dapat diatasi dengan dukungan sosial, perubahan gaya hidup, dan partisipasi dalam aktivitas menyenangkan. MentalKu menyediakan panduan dan latihan untuk membantu Anda mengatasi gejala depresi.",
-        "sedang": "Jika hasil menunjukkan gejala depresi sedang, MentalKu dapat memberikan panduan terstruktur dan latihan yang dapat membantu Anda mengelola perasaan tersebut. Pertimbangkan juga untuk berkonsultasi dengan seorang profesional kesehatan mental untuk evaluasi lebih lanjut.",
-        "berat": "Gejala depresi berat memerlukan perhatian segera dari seorang profesional kesehatan mental. MentalKu memberikan sumber daya awal, namun sangat penting untuk mencari bantuan profesional, seperti seorang psikiater atau psikoterapis, untuk pengobatan dan dukungan intensif."
-      }
+  "hasil_test": {
+    "stres": {
+      "ringan": "Anda mungkin mengalami stres sehari-hari yang umum, seperti tekanan pekerjaan atau tuntutan kehidupan sehari-hari. Strategi pengelolaan stres sederhana, seperti berolahraga ringan atau melibatkan diri dalam aktivitas yang menyenangkan, dapat membantu mengurangi dampak stres ini. MentalKu menyediakan panduan praktis dan latihan khusus untuk membantu Anda mengatasi stres sehari-hari.",
+      "sedang": "Jika hasil tes menunjukkan tingkat stres sedang, ini bisa menjadi tanda bahwa stres yang Anda alami memerlukan perhatian lebih serius. MentalKu dapat membantu Anda mengidentifikasi sumber stres dan menyediakan panduan yang lebih mendalam untuk mengatasi situasi ini. Pertimbangkan juga untuk berkonsultasi dengan seorang profesional kesehatan mental untuk dukungan lebih lanjut.",
+      "berat": "Hasil stres berat mungkin menandakan bahwa Anda sedang mengalami tingkat stres yang signifikan dan merusak. Diperlukan intervensi segera, dan kami sangat menyarankan Anda untuk mencari bantuan dari konsultan psikologi atau terapis yang dapat memberikan dukungan terapeutik dan membantu Anda mengembangkan strategi pengelolaan stres yang lebih intensif."
     },
-    "saran_akhir": "Jika Anda merasa khawatir atau membutuhkan dukungan tambahan, kami selalu menyarankan untuk berbicara dengan seseorang. MentalKu akan terus menyediakan bimbingan dan dukungan, namun profesional kesehatan mental dapat memberikan evaluasi yang lebih mendalam dan perencanaan perawatan yang lebih terfokus sesuai kebutuhan Anda."
+    "kecemasan": {
+      "ringan": "Kecemasan ringan mungkin terkait dengan situasi tertentu dan dapat diatasi dengan teknik relaksasi sederhana. MentalKu menyediakan panduan untuk mengatasi kecemasan sehari-hari dan membantu Anda mengidentifikasi cara-cara untuk mengelola perasaan cemas.",
+      "sedang": "Kecemasan sedang mungkin memerlukan pendekatan yang lebih terstruktur. Aplikasi MentalKu dapat memberikan latihan khusus dan saran untuk membantu Anda mengatasi kecemasan. Pertimbangkan juga untuk mencari dukungan profesional, seperti konseling atau terapi kognitif.",
+      "berat": "Kecemasan berat memerlukan perhatian segera. MentalKu dapat memberikan panduan awal, namun sangat disarankan untuk berkonsultasi dengan seorang profesional kesehatan mental yang dapat menilai dan memberikan dukungan yang sesuai, mungkin termasuk terapi obat atau terapi terapeutik intensif."
+    },
+    "depresi": {
+      "ringan": "Gejala depresi ringan mungkin dapat diatasi dengan dukungan sosial, perubahan gaya hidup, dan partisipasi dalam aktivitas menyenangkan. MentalKu menyediakan panduan dan latihan untuk membantu Anda mengatasi gejala depresi.",
+      "sedang": "Jika hasil menunjukkan gejala depresi sedang, MentalKu dapat memberikan panduan terstruktur dan latihan yang dapat membantu Anda mengelola perasaan tersebut. Pertimbangkan juga untuk berkonsultasi dengan seorang profesional kesehatan mental untuk evaluasi lebih lanjut.",
+      "berat": "Gejala depresi berat memerlukan perhatian segera dari seorang profesional kesehatan mental. MentalKu memberikan sumber daya awal, namun sangat penting untuk mencari bantuan profesional, seperti seorang psikiater atau psikoterapis, untuk pengobatan dan dukungan intensif."
+    }
+  },
+  "saran_akhir": "Jika Anda merasa khawatir atau membutuhkan dukungan tambahan, kami selalu menyarankan untuk berbicara dengan seseorang. MentalKu akan terus menyediakan bimbingan dan dukungan, namun profesional kesehatan mental dapat memberikan evaluasi yang lebih mendalam dan perencanaan perawatan yang lebih terfokus sesuai kebutuhan Anda."
 }
-  
