@@ -317,12 +317,17 @@ const DepressionTest = () => {
 
         {/* hasil */}
         {currentQuestionIndex === quizData.questions_depresi.length && (
-          <div className="bg-yellow-100">
+          <div className="bg-white-100">
             <div id="test-results">
               <div>
-                <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
-                  Status anda saat ini menunjukkan
-                </p>
+                <div className="bg-green-100">
+                  <h1 className="text-base sm:text-5xl text-center xl:text-6xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
+                    Hasil Tes Depresi
+                  </h1>
+                  <p className="text-base sm:text-2xl text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
+                    Pertanyaan-pertanyaan ini merujuk pada Alat Skrining Berbasis Bukti, namun hanya memberikan indikasi dan tidak dapat dianggap sebagai diagnosis resmi.
+                  </p>
+                </div>
                 <div className={depressionDesign}>{depressionCategory}</div>
                 <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
                   Kami menyarankan beberapa opsi yang dapat anda lakukan untuk
@@ -348,13 +353,6 @@ const DepressionTest = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="xl:w-5/12 p-4" id="image_result">
-                    <img
-                      srcSet={hero}
-                      alt="nama gambar"
-                      className="xl:w-full h-auto rounded-md shadow-md"
-                    />
                   </div>
                 </div>
               </div>
