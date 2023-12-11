@@ -1,15 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import quizData from "../../../../../public/data/pertanyaan.json";
-import recomendationData from "../../../../../public/data/Recomendation.json";
+import recomendationData from "../../../../../public/data/NewRecomdation.json";
+import resultData from "../../../../../public/data/HasilTest.json";
 
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-
-import hero from "../../../../assets/hero-depresi.png";
 
 const DepressionTest = () => {
   const [answers, setAnswers] = useState(
@@ -20,33 +19,35 @@ const DepressionTest = () => {
   const [depressionRecomendation, setDepressionRecomendation] = useState([]);
 
   const [depressionDesign, setDepressionDesign] = useState("");
+  const [depressionResult, setDepressionResult] = useState("");
 
   const [isModalAnswer, setIsModalAnswer] = useState(false);
   const [isModalSubmit, setIsModalSubmit] = useState(false);
 
   const [isNext, setIsNext] = useState(``);
+  const [progressPercentage, setProgressPercentage] = useState(0);
 
   const downloadPdf = () => {
     const pdf = new jsPDF({
-        format: "a4",
-        orientation: "landscape",
-        unit: "mm",
-        scale: 2,
+      format: "a4",
+      orientation: "potrait",
+      unit: "mm",
+      scale: 2,
     });
 
     // Dapatkan elemen HTML yang ingin dijadikan PDF
-    const element = document.getElementById('test-results');
+    const element = document.getElementById("test-results");
 
     // Konversi elemen HTML ke gambar menggunakan html2canvas
     html2canvas(element).then((canvas) => {
-      const imageData = canvas.toDataURL('image/png');
+      const imageData = canvas.toDataURL("image/png");
       const imgWidth = 300;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-  
-      pdf.addImage(imageData, 'PNG', 0, 0, imgWidth, imgHeight);
-      pdf.save('hasil_test_depresi.pdf');
+
+      pdf.addImage(imageData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("hasil_test_depresi.pdf");
     });
-};
+  };
 
   window.onbeforeunload = function (event) {
     const confirmationMessage =
@@ -92,68 +93,56 @@ const DepressionTest = () => {
     const totalScore = answers.reduce((acc, value) => acc + value, 0);
 
     let data = recomendationData;
+    let percentage = 0;
+    let depressionCategory = "";
 
     // logika penilaian depresi
     if (totalScore >= 0 && totalScore <= 9) {
-      setDepressionCategory("NORMAL");
+      depressionCategory = "NORMAL";
+      percentage = 20;
       setDepressionRecomendation(data.normal_depresi);
       setDepressionDesign(
-        "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center w-full mt-11 px-20 py-15 max-md:text-4xl mt-15 px-5",
+        "text-black text-center font-semibold whitespace-nowrap justify-center items-stretch bg-teal-700 bg-opacity-60 self-center w-full mt-11 max-md:text-4xl mt-15 px-5",
       );
     } else if (totalScore >= 10 && totalScore <= 13) {
-      setDepressionCategory("RINGAN");
+      depressionCategory = "RINGAN";
+      percentage = 40;
       setDepressionRecomendation(data.ringan_depresi);
       setDepressionDesign(
-        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center w-full mt-11 px-20 py-15 max-md:text-4xl mt-15 px-5",
+        "text-black text-center font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center w-full mt-11 max-md:text-4xl mt-15 px-5",
       );
     } else if (totalScore >= 14 && totalScore <= 20) {
-      setDepressionCategory("SEDANG");
+      depressionCategory = "SEDANG";
+      percentage = 60;
       setDepressionRecomendation(data.sedang_depresi);
       setDepressionDesign(
-        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center w-full mt-11 px-20 py-15 max-md:text-4xl mt-15 px-5",
+        "text-black text-center font-semibold whitespace-nowrap justify-center items-stretch bg-orange-300 bg-opacity-60 self-center w-full mt-11 max-md:text-4xl mt-15 px-5",
       );
     } else if (totalScore >= 21 && totalScore <= 27) {
-      setDepressionCategory("PARAH");
+      depressionCategory = "PARAH";
+      percentage = 80;
       setDepressionRecomendation(data.parah_depresi);
       setDepressionDesign(
-        "text-teal-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center w-full mt-11 px-20 py-15 max-md:text-4xl mt-15 px-5",
+        "text-black text-center font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 bg-opacity-60 self-center w-full mt-11 max-md:text-4xl mt-15 px-5",
       );
     } else if (totalScore > 28) {
-      setDepressionCategory("SANGAT PARAH");
+      depressionCategory = "SANGAT PARAH";
+      percentage = 100;
       setDepressionRecomendation(data["sangat-parah_depresi"]);
       setDepressionDesign(
-        "text-white-500 text-center text-6xl font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 self-center w-full mt-11 px-20 py-15 max-md:text-4xl mt-15 px-5",
+        "text-black text-center font-semibold whitespace-nowrap justify-center items-stretch bg-red-600 self-center w-full mt-11 max-md:text-4xl mt-15 px-5",
       );
     }
+
+    setDepressionCategory(depressionCategory);
+    const result =
+      resultData.hasil_test.depresi[depressionCategory.toLowerCase()];
+    setProgressPercentage(percentage);
+    setDepressionResult(result);
   };
 
   let questions = [];
   questions = quizData.questions_depresi;
-
-  const style = `
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-    .typing-animation {
-      overflow: none;
-      white-space: none;
-      animation: none;
-  }
-
-  @media only screen and (min-width: 1200px){
-    .typing-animation{
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 2s steps(20, end);
-    }
-  }
-`;
 
   const modalStyles = {
     content: {
@@ -168,8 +157,6 @@ const DepressionTest = () => {
 
   return (
     <>
-      <style>{style}</style>
-
       <div className="m-10 border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-rose-600 max-md:max-w-full max-md:my-10 max-md:px-20">
         {currentQuestionIndex < quizData.questions_depresi.length && (
           <h2 className="p-4 justify-center font-extrabold text-black text-justify text-4xl self-stretch max-md:max-w-full max-md:text-4xl">
@@ -236,7 +223,7 @@ const DepressionTest = () => {
         <div className="bg-black self-stretch shrink-0 h-px mt-8 max-md:max-w-full" />
         {currentQuestionIndex < quizData.questions_depresi.length && (
           <div key={quizData.questions_depresi[currentQuestionIndex].id}>
-            <p className="typing-animation text-base sm:text-2xl xl:text-3xl pt-4 pb-8 text-left font-bold text-black self-stretch mt-10 max-md:max-w-full max-md:mt-10">
+            <p className="text-base sm:text-2xl xl:text-3xl pt-4 pb-8 text-left font-bold text-black self-stretch mt-10 max-md:max-w-full max-md:mt-10">
               {quizData.questions_depresi[currentQuestionIndex].question}
             </p>
             {/* Opsi */}
@@ -244,12 +231,12 @@ const DepressionTest = () => {
               (option, optionIndex) => (
                 <button
                   key={optionIndex}
-                  className={`sm:w-64 shadow-md xl:w-72 h-17 border rounded-md justify-center m-5 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-8 py-5 rounded-md border-solid max-md:px-10${
+                  className={`sm:w-72 xl:w-54 h-17 border rounded-md justify-center m-5 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-8 py-5 rounded-md border-solid max-md:px-10 hover:bg-gray-200${
                     answers[currentQuestionIndex] ===
                     quizData.questions_depresi[currentQuestionIndex].value[
                       optionIndex
                     ]
-                      ? "border-rose-900 font-extrabold" //active
+                      ? " bg-rose-600 text-black font-extrabold" //active
                       : ""
                   }`}
                   onClick={() =>
@@ -321,30 +308,55 @@ const DepressionTest = () => {
             <div id="test-results">
               <div>
                 <div className="bg-green-100">
-                  <h1 className="text-base sm:text-5xl text-center xl:text-6xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
+                  <h1 className="text-base sm:text-5xl text-center xl:text-6xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 max-md:max-w-full">
                     Hasil Tes Depresi
                   </h1>
-                  <p className="text-base sm:text-2xl text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
-                    Pertanyaan-pertanyaan ini merujuk pada Alat Skrining Berbasis Bukti, namun hanya memberikan indikasi dan tidak dapat dianggap sebagai diagnosis resmi.
+                  <p className="text-base sm:text-2xl text-center xl:text-3xl text-black self-stretch leading-10 py-8 max-md:max-w-full">
+                    Pertanyaan-pertanyaan ini merujuk pada Alat Skrining
+                    Berbasis Bukti, namun hanya memberikan indikasi dan tidak
+                    dapat dianggap sebagai diagnosis resmi.
                   </p>
                 </div>
-                <div className={depressionDesign}>{depressionCategory}</div>
                 <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
-                  Kami menyarankan beberapa opsi yang dapat anda lakukan untuk
-                  mengembalikan mood anda
+                  Hasil Menunjukkan bahwa <br /> anda kemungkinan mengalami
+                  depresi yang <br /><span className={depressionDesign}>{depressionCategory}</span>
+                </p>
+
+                {/* Progress bar */}
+
+                <div className="flex items-center justify-center mt-5">
+                  <div className="relative w-full bg-gray-400 h-10 rounded-full">
+                    <div
+                      className="absolute h-10 bg-green-500 rounded-full text-right"
+                      style={{ width: `${progressPercentage}%` }}
+                    ><p className="font-bold w-10 h-10 pr-1 py-2 mx-3 text-1.5xl text-center border border-gray-500 bg-white text-right rounded-full">
+                    {progressPercentage}%</p></div>
+                  </div>
+                </div>
+                {/* Hasil Test */}
+                <p className="text-base sm:text-2xl font-bold text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
+                  {
+                    resultData.hasil_test.depresi[
+                      depressionCategory.toLowerCase()
+                    ]
+                  }
+                </p>
+                <p className="text-base sm:text-2xl text-center xl:text-3xl pb-8 font-bold text-black self-stretch leading-10 max-md:max-w-full">
+                  Namun, kami menyarankan beberapa opsi yang dapat anda lakukan
+                  untuk mengembalikan mood anda
                 </p>
                 <div className="sm: grid-cols-1 xl:flex">
-                  <div className="sm:w-full xl:w-7/12 p-4">
-                    <ul className="text-base sm:text-2xl xl:text-3xl list-disc text-black text-justify self-stretch grow whitespace-nowrap max-md:max-w-full">
+                  <div className="w-full p-4">
+                    <ul className="text-base sm:text-2xl xl:text-3xl list-disc font-semibold text-black text-justify self-stretch grow whitespace-wrap max-md:max-w-full">
                       {depressionRecomendation.map((item) => (
                         <li
                           key={item.id}
-                          className="py-4 flex text-left font-medium whitespace-pre-wrap"
+                          className="py-4 flex text-left font-medium whitespace-prewrap"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
-                            fill="darkgreen" //ganti dengan warna
+                            fill="darkgreen"
                             className="w-7 h-8"
                           >
                             <path d="M10 1a6 6 0 00-3.815 10.631C7.237 12.5 8 13.443 8 14.456v.644a.75.75 0 00.572.729 6.016 6.016 0 002.856 0A.75.75 0 0012 15.1v-.644c0-1.013.762-1.957 1.815-2.825A6 6 0 0010 1zM8.863 17.414a.75.75 0 00-.226 1.483 9.066 9.066 0 002.726 0 .75.75 0 00-.226-1.483 7.553 7.553 0 01-2.274 0z" />
@@ -360,13 +372,11 @@ const DepressionTest = () => {
 
             {/* unduh dokumen */}
             <button
-              // data-html2pdf-ignore
               className="text-base sm:text-2x1 font-bold xl: text-center text-3xl bg-rose-400 mt-5 mx-4 px-6 py-3 rounded-3xl"
               onClick={downloadPdf}
             >
               Unduh Hasil Test (PDF)
             </button>
-
           </div>
         )}
       </div>
