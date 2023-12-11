@@ -59,6 +59,7 @@
       {
         "id": "2",
         "saran": "Dapatkan dukungan dan perawatan jangka panjang melibatkan profesional kesehatan mental."
+      }
     ],
   
     "normal_stress": [
@@ -125,6 +126,7 @@
       {
         "id": "3",
         "saran": "Istirahat dan lakukan perawatan diri secara intensif untuk pemulihan menyeluruh."
+      }
     ],
   
     "normal_depresi": [
@@ -195,6 +197,7 @@
       {
         "id": "3",
         "saran": "Melibatkan dukungan keluarga dan lingkungan untuk mendukung proses pemulihan Anda."
+      }
     ]
   }
   
