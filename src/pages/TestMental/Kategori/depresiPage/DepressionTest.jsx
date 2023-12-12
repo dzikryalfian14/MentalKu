@@ -27,12 +27,13 @@ const DepressionTest = () => {
   const [isNext, setIsNext] = useState(``);
   const [progressPercentage, setProgressPercentage] = useState(0);
 
+  const pdfWidth = 300; // Lebar halaman dalam satuan mm
+  const pdfHeight = 400; // Tinggi halaman dalam satuan mm
+  
   const downloadPdf = () => {
     const pdf = new jsPDF({
-      format: "a4",
-      orientation: "potrait",
-      unit: "mm",
-      scale: 2,
+      format: [pdfWidth, pdfHeight],
+      unit: 'mm',
     });
 
     // Dapatkan elemen HTML yang ingin dijadikan PDF
@@ -311,15 +312,14 @@ const DepressionTest = () => {
                   <h1 className="text-base sm:text-5xl text-center xl:text-6xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 max-md:max-w-full">
                     Hasil Tes Depresi
                   </h1>
-                  <p className="text-base sm:text-2xl text-center xl:text-3xl text-black self-stretch leading-10 py-8 max-md:max-w-full">
+                  <p className="text-base sm:text-xl text-center xl:text-2xl text-black self-stretch leading-10 py-8 max-md:max-w-full">
                     Pertanyaan-pertanyaan ini merujuk pada Alat Skrining
                     Berbasis Bukti, namun hanya memberikan indikasi dan tidak
                     dapat dianggap sebagai diagnosis resmi.
                   </p>
                 </div>
                 <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
-                  Hasil Menunjukkan bahwa <br /> anda kemungkinan mengalami
-                  depresi yang <br /><span className={depressionDesign}>{depressionCategory}</span>
+                Hasil Menunjukkan bahwa kondisi anda sebagai berikut
                 </p>
 
                 {/* Progress bar */}
@@ -333,21 +333,23 @@ const DepressionTest = () => {
                     {progressPercentage}%</p></div>
                   </div>
                 </div>
+                <div className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
+                 <span className={depressionDesign}>{depressionCategory}</span>
+                </div>
                 {/* Hasil Test */}
-                <p className="text-base sm:text-2xl font-bold text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
+                <p className="text-base sm:text-xl font-semibold text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
                   {
                     resultData.hasil_test.depresi[
                       depressionCategory.toLowerCase()
                     ]
                   }
                 </p>
-                <p className="text-base sm:text-2xl text-center xl:text-3xl pb-8 font-bold text-black self-stretch leading-10 max-md:max-w-full">
-                  Namun, kami menyarankan beberapa opsi yang dapat anda lakukan
-                  untuk mengembalikan mood anda
+                <p className="text-base sm:text-2xl text-center xl:text-3xl pb-8 font-semibold text-black self-stretch leading-10 max-md:max-w-full">
+                  Namun, kami menyarankan beberapa hal yang bisa Anda lakukan :
                 </p>
                 <div className="sm: grid-cols-1 xl:flex">
                   <div className="w-full p-4">
-                    <ul className="text-base sm:text-2xl xl:text-3xl list-disc font-semibold text-black text-justify self-stretch grow whitespace-wrap max-md:max-w-full">
+                  <ul className="text-base sm:text-2xl xl:text-2xl list-disc font-semibold text-black text-justify self-stretch grow whitespace-wrap max-md:max-w-full">
                       {depressionRecomendation.map((item) => (
                         <li
                           key={item.id}
