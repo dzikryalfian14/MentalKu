@@ -171,8 +171,8 @@ const TestMental = () => {
               </li>
               <li className="mb-2">
                 Setelah menyelesaikan semua pertanyaan, hasil tes akan
-                dikategorikan sesuai dengan kondisimu saat ini dan akan
-                dikirimkan melalui e-mail dalam beberapa hari.
+                dikategorikan sesuai dengan kondisimu saat ini dan hasil 
+                test bisa di cetak sesuai dengan format pdf
               </li>
               <li>
                 Kami menekankan pentingnya untuk tidak melakukan self-diagnosis.
