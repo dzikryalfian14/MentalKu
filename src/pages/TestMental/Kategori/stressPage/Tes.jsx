@@ -14,7 +14,7 @@ const Tes = () => {
   return (
     <div className="p-16 ">
       <div className="text-center text-lg font-bold">
-        Untuk mengetahui kondisi stress, silahkan ikuti tes!!
+      Untuk mengetahui kondisi anda pada saat ini, silahkan ikuti berikut
       </div>
       
       <div className="flex justify-center">
