@@ -158,6 +158,7 @@ const DepressionTest = () => {
 
   return (
     <>
+      <div className="min-h-[70vh] flex flex-row max-md:flex-col md:justify-around items-center md:mx-5 mx-5 mt-10 lg:flex-wrap">
       <div className="m-10 border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-rose-600 max-md:max-w-full max-md:my-10 max-md:px-20">
         {currentQuestionIndex < quizData.questions_depresi.length && (
           <h2 className="p-4 justify-center font-extrabold text-black text-justify text-4xl self-stretch max-md:max-w-full max-md:text-4xl">
@@ -232,7 +233,7 @@ const DepressionTest = () => {
               (option, optionIndex) => (
                 <button
                   key={optionIndex}
-                  className={`sm:w-72 xl:w-54 h-17 border rounded-md justify-center m-5 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-8 py-5 rounded-md border-solid max-md:px-10 hover:bg-gray-200${
+                  className={`sm:w-60 xl:w-42 h-17 border rounded-md justify-center m-3 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-4 py-4 border-solid max-md:px-10 hover:bg-gray-200${
                     answers[currentQuestionIndex] ===
                     quizData.questions_depresi[currentQuestionIndex].value[
                       optionIndex
@@ -259,10 +260,10 @@ const DepressionTest = () => {
               {currentQuestionIndex > 0 && (
                 <button
                   onClick={handlePreviousQuestion}
-                  className="text-white text-center text-3xl bg-rose-400 mt-20 px-6 py-6 rounded-3xl max-md:mt-10"
+                  className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
                 >
                   <svg
-                    className="w-6 h-6 text-white-800 dark:text-white"
+                    className="w-4 h-4 text-white-800 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -280,11 +281,11 @@ const DepressionTest = () => {
               )}
               <button
                 onClick={handleNextQuestion}
-                className="text-white text-center text-3xl bg-rose-400 mt-20 px-6 py-6 rounded-3xl max-md:mt-10"
+                className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
               >
                 {isNext}
                 <svg
-                  className="w-6 h-6 text-white-800 dark:text-white"
+                  className="w-4 h-4 text-white-800 dark:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -383,6 +384,7 @@ const DepressionTest = () => {
             </div>
           </div>
         )}
+      </div>
       </div>
     </>
   );
