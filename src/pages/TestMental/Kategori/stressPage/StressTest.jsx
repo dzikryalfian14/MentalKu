@@ -371,12 +371,15 @@ const StressTest = () => {
             </div>
 
             {/* unduh dokumen */}
-            <button
-              className="text-base sm:text-2x1 font-bold xl: text-center text-3xl bg-rose-400 mt-5 mx-4 px-6 py-3 rounded-3xl"
-              onClick={downloadPdf}
-            >
-              Unduh Hasil Test (PDF)
-            </button>
+            <div className="flex justify-center items-center">
+              <button 
+                className="text-base sm:text-2x1 font-bold text-center text-3xl bg-rose-400 mt-5 mx-4 px-6 py-3 rounded-3xl"
+                onClick={downloadPdf}
+              >
+                Unduh Hasil Test (PDF)
+              </button>
+            </div>
+
           </div>
         )}
       </div>
