@@ -25,12 +25,12 @@ const Tes = () => {
         </button>
       </div>
 
-      {/* Modal */}
-      <Modal
+       {/* Modal */}
+       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        className="modal p-4 bg-[#ffffff] rounded-md max-w-6xl mx-auto mt-24 max-h-80 border border-solid border-rose-600 overflow-auto px-10"
-        overlayClassName="overlay bg-white bg-opacity-70 fixed top-0 left-0 right-0 bottom-0"
+        className="modal p-4 bg-[#ffffff] rounded-md max-w-[100 vh] mx-auto max-h-[100 vh] min-h-[100 vh] z-[9998] transition-all duration-300 border border-solid border-rose-600 overflow-auto px-16 py-[50px]"
+        overlayClassName="overlay bg-white bg-opacity-70 fixed z-[9998] overflow-auto top-0 left-0 right-0 bottom-0"
       >
         <div className="content text-center relative">
         <p className="text-red-500 text-2xl font-bold">Sebelum memulai, kami ingin memberikan beberapa informasi penting:</p>
@@ -44,7 +44,7 @@ const Tes = () => {
           <div className="flex justify-center">
             <button
               onClick={() => setModalIsOpen(false)}
-              className="bg-red-500  hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-300 text-white py-2 px-4 rounded-md  mr-2 absolute -top-5 -right-12"
+              className="bg-red-500  hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-300 text-white py-2 px-4 rounded-md  mr-2 absolute -top-12 -right-16"
             >
               X
             </button>
