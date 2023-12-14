@@ -5,7 +5,7 @@
     "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/ezra-jon-freddy-pakpahan-2214a529a/",
     "instagramURL": "https://www.instagram.com/ezura_ezra/",
-    "photo": "/src/assets/teams/F152YB276-photo.png"
+    "photo": "/teams/F152YB276-photo.png"
   },
   {
     "name": "Inosensius G. Atok",
@@ -13,7 +13,7 @@
     "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/inosensius-g-atok-0ab616225/",
     "instagramURL": "https://www.instagram.com/ino.gndslvs/",
-    "photo": "/src/assets/teams/F631YB139-photo.png"
+    "photo": "/teams/F631YB139-photo.png"
   },
   {
     "name": "Dzikry Alfian",
@@ -21,7 +21,7 @@
     "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/dzikry-alfian/",
     "instagramURL": "https://www.instagram.com/dzikryaal_/",
-    "photo": "/src/assets/teams/F225YB117-photo.png"
+    "photo": "/teams/F225YB117-photo.png"
   },
   {
     "name": "Moh. Reyhand F",
@@ -29,7 +29,7 @@
     "position": "FEBE Dev",
     "linkedInURL": "https://www.linkedin.com/in/mohreyhandf/",
     "instagramURL": "https://www.instagram.com/fart_tur/",
-    "photo": "/src/assets/teams/F142YB158-photo.png"
+    "photo": "/teams/F142YB158-photo.png"
   },
   {
     "name": "Nurul Nur Utami",
@@ -37,6 +37,6 @@
     "position": "FS Dev",
     "linkedInURL": "https://www.linkedin.com/in/nurul-nur-utami-0b855225a/",
     "instagramURL": "https://www.instagram.com/r.ull__/",
-    "photo": "/src/assets/teams/S283XB487-photo.png"
+    "photo": "/teams/S283XB487-photo.png"
   }
 ]
