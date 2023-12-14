@@ -1,0 +1,161 @@
+[
+  {
+    "depresi": {
+      "hero_depresi": {
+        "hero_title": "Apa itu Depresi?",
+        "hero_desc": "Depresi adalah kondisi mental yang lebih serius daripada sekadar merasa sedih atau murung. Ini melibatkan perasaan sedih yang dalam dan menetap dalam jangka waktu yang lama, seringkali berbulan-bulan atau bertahun-tahun. Gejalanya meliputi kehilangan minat pada hal-hal yang biasanya dinikmati, perubahan berat badan atau nafsu makan, kesulitan tidur atau tidur terlalu banyak, perasaan putus asa, serta pikiran tentang kematian atau bunuh diri.",
+        "hero_img": "../../assets/hero/hero-stress.png"
+      },
+      "penyebab_depresi": [
+        "✔ Stres Berkepanjangan",
+        "✔ Ketidakmampuan Mengelola Emosi",
+        "✔ Kebiasaan Hidup dan Gaya Hidup",
+        "✔ Kondisi Lingkungan",
+        "✔ Kondisi Kesehatan fisik dan penyakit Lainnya",
+        "✔ Perubahan Kimia Otak",
+        "✔ Faktor Genetik dan Keturunan",
+        "✔ Perubahan Hidup yang Besar"
+      ],
+      "dampak_depresi": [
+        {
+          "nama": "Produktivitas Menurun",
+          "gambar": "../../assets/dampak/cemas-2.png"
+        },
+        {
+          "nama": "Gangguan Tidur",
+          "gambar": "../../assets/dampak/cemas-3.png"
+        },
+        {
+          "nama": "Masalah Kesehatan Fisik",
+          "gambar": "../../assets/dampak/cemas-4.png"
+        },
+        {
+          "nama": "Pengaruh pada Kondisi Emosional",
+          "gambar": "../../assets/dampak/stress-2.png"
+        }
+      ],
+      "modal_depresi": {
+        "text": "Apakah Anda yakin ingin melakukan tes Depresi ?",
+        "buttons": [
+          {
+            "text": "Tidak",
+            "color": "red",
+            "action": "closeModal"
+          },
+          {
+            "text": "Iya",
+            "color": "green",
+            "action": "navigate",
+            "target": "/tes-kesehatan-mental/tes-depresi"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "stress": {
+      "hero_stress": {
+        "hero_title": "Apa itu Stress?",
+        "hero_desc": "Depresi adalah kondisi mental yang lebih serius daripada sekadar merasa sedih atau murung. Ini melibatkan perasaan sedih yang dalam dan menetap dalam jangka waktu yang lama, seringkali berbulan-bulan atau bertahun-tahun. Gejalanya meliputi kehilangan minat pada hal-hal yang biasanya dinikmati, perubahan berat badan atau nafsu makan, kesulitan tidur atau tidur terlalu banyak, perasaan putus asa, serta pikiran tentang kematian atau bunuh diri.",
+        "hero_img": "../../assets/hero/hero-depresi.png"
+      },
+      "penyebab_stress": [
+        "✔ Trauma atau Pengalaman Traumatis",
+        "✔ Perubahan Hormonal",
+        "✔ Kebiasaan Hidup dan Gaya Hidup",
+        "✔ Kondisi Lingkungan",
+        "✔ Kondisi Kesehatan Mental atau Fisik Lainnya",
+        "✔ Perubahan Kimia Otak",
+        "✔ Faktor Genetik dan Keturunan",
+        "✔ Perubahan Hidup yang Besar"
+      ],
+      "dampak_stress": [
+        {
+          "nama": "Produktivitas Menurun",
+          "gambar": "../../dampak/assets/cemas-2.png"
+        },
+        {
+          "nama": "Gangguan Tidur",
+          "gambar": "../../dampak/assets/cemas-3.png"
+        },
+        {
+          "nama": "Masalah Kesehatan Fisik",
+          "gambar": "../../dampak/assets/cemas-4.png"
+        },
+        {
+          "nama": "Pengaruh pada Kondisi Emosional",
+          "gambar": "../../dampak/assets/stress-2.png"
+        }
+      ],
+      "modal_stress": {
+        "text": "Apakah Anda yakin ingin melakukan tes stress ?",
+        "buttons": [
+          {
+            "text": "Tidak",
+            "color": "red",
+            "action": "closeModal"
+          },
+          {
+            "text": "Iya",
+            "color": "green",
+            "action": "navigate",
+            "target": "/tes-kesehatan-mental/tes-stress"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kecemasan": {
+      "hero_kecemasan": {
+        "hero_title": "Apa itu Kecemasan?",
+        "hero_desc": "Kecemasan adalah respons alami tubuh terhadap stres atau ketidakpastian. Ini bisa menjadi reaksi singkat terhadap situasi tertentu atau menjadi gangguan yang menetap dalam hidup sehari-hari seseorang. Kecemasan dapat terjadi dalam berbagai tingkatan, mulai dari yang ringan hingga yang parah. Gejalanya meliputi rasa gelisah, ketegangan, sulit berkonsentrasi, dan ketakutan yang berlebihan terhadap situasi tertentu.",
+        "hero_img": "../../assets/hero/hero-kecemasan.png"
+      },
+      "penyebab_kecemasan": [
+        "✔ Tekanan Kerja dan Lingkungan Kerja",
+        "✔ Masalah Keuangan",
+        "✔ Perubahan Hidup yang Besar",
+        "✔ Konflik dalam Hubungan",
+        "✔ Tekanan Sosial",
+        "✔ Tuntutan Waktu",
+        "✔ Gangguan Lingkungan",
+        "✔ Perubahan Sosial atau Politik"
+      ],
+      "dampak_kecemasan": [
+        {
+          "nama": "Produktivitas Menurun",
+          "gambar": "../../assets/dampak/cemas-2.png"
+        },
+        {
+          "nama": "Gangguan Tidur",
+          "gambar": "../../assets/dampak/cemas-3.png"
+        },
+        {
+          "nama": "Masalah Kesehatan Fisik",
+          "gambar": "../../assets/dampak/cemas-4.png"
+        },
+        {
+          "nama": "Pengaruh pada Kondisi Emosional",
+          "gambar": "../../assets/dampak/stress-2.png"
+        }
+      ],
+      "modal_kecemasan": {
+        "text": "Apakah Anda yakin ingin melakukan tes Kecemasan ?",
+        "buttons": [
+          {
+            "text": "Tidak",
+            "color": "red",
+            "action": "closeModal"
+          },
+          {
+            "text": "Iya",
+            "color": "green",
+            "action": "navigate",
+            "target": "/tes-kesehatan-mental/tes-kecemasan"
+          }
+        ]
+      }
+    }
+  }
+]

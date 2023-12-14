@@ -2,7 +2,7 @@ import React from "react";
 
 const AlurCard = (props) => {
   return (
-    <div className=" flex flex-col items-center py-5 px-5 lg:py-8 lg:px-12 w-fit lg:w-2/6 cursor-pointer hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="flex flex-col items-center py-5 px-5 lg:py-8 lg:px-12 w-fit lg:w-2/6 hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <img
         className="items-center rounded-t-lg max-h-56 h-auto max-w-5 mb-6"
         src={props.img}

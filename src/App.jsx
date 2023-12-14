@@ -8,9 +8,9 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const TesMental = lazy(() => import("./pages/TestMental"));
-const Depresi = lazy(() => import("./pages/TestMental/Kategori/Depresi"));
-const Stress = lazy(() => import("./pages/TestMental/Kategori/Stress"));
-const Kecemasan = lazy(() => import("./pages/TestMental/Kategori/Kecemasan"));
+const Depresi = lazy(() => import("./pages/Depresi"));
+const Stress = lazy(() => import("./pages/Stress"));
+const Kecemasan = lazy(() => import("./pages/Kecemasan"));
 const DepresiTest = lazy(
   () => import("./pages/TestMental/Kategori/depresiPage/DepressionTest"),
 );
@@ -37,16 +37,20 @@ const App = () => {
             element={<Kecemasan />}
           />
           <Route
-            path="/tes-kesehatan-mental/depressiontest"
+            path="/tes-kesehatan-mental/tes-depresi"
             element={<DepresiTest />}
           />
           <Route
-            path="/tes-kesehatan-mental/kecemasantest"
+            path="/tes-kesehatan-mental/tes-kecemasan"
             element={<KecemasanTest />}
           />
           <Route
-            path="/tes-kesehatan-mental/stresstest"
+            path="/tes-kesehatan-mental/tes-stress"
             element={<StressTest />}
+          />
+          <Route
+            path="/pageTemplate"
+            element={<pageTemplate />}
           />
           <Route path="*" element={<NotFound />} />
         </Routes>

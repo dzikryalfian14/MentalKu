@@ -17,6 +17,18 @@ const Navbar = () => {
         return "- Tentang Kami";
       case "/tes-kesehatan-mental":
         return "- Tes Kesehatan Mental";
+      case "/tes-kesehatan-mental/depresi":
+        return "- Tes Kesehatan Mental Depresi";
+      case "/tes-kesehatan-mental/stress":
+        return "- Tes Kesehatan Mental Stress";
+      case "/tes-kesehatan-mental/kecemasan":
+        return "- Tes Kesehatan Mental Kecemasan";
+      case "/tes-kesehatan-mental/tes-depresi":
+        return "- Tes Depresi";
+      case "/tes-kesehatan-mental/tes-stress":
+        return "- Tes Stress";
+      case "/tes-kesehatan-mental/tes-kecemasan":
+        return "- Tes Kecemasan";
       default:
         return "- Halaman tidak ditemukan";
     }

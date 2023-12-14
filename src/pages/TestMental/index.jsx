@@ -9,13 +9,10 @@ import imgCemas from "../../assets/cemas.png";
 import imgDepresi from "../../assets/depresi.png";
 import imgStress from "../../assets/stress.png";
 import imgPanduan from "../../assets/panduan.png";
-import { Link } from "react-router-dom";
 import {
   Dialog,
   DialogHeader,
   DialogBody,
-  DialogFooter,
-  Button,
 } from "@material-tailwind/react";
 
 const TestMental = () => {
@@ -107,7 +104,7 @@ const TestMental = () => {
               <DialogHeader className="flex text-4xl justify-center">
                 <p>Daftar Kategori Test Kesehatan Mental</p>
                 <button className="ml-auto" onClick={() => setSize(null)}>
-                  <MdCancel />
+                  <MdCancel className="text-red-600" />
                 </button>
               </DialogHeader>
               <hr />
