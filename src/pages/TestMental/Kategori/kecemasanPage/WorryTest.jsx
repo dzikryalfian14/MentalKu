@@ -284,6 +284,7 @@ const WorryTest = () => {
                 className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
                 >
                 {isNext}
+                {currentQuestionIndex === quizData.questions_kecemasan.length - 1 ? null : (
                 <svg
                   className="w-4 h-4 text-white-800 dark:text-white"
                   aria-hidden="true"
@@ -299,6 +300,7 @@ const WorryTest = () => {
                     d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
                   />
                 </svg>
+                )}
               </button>
             </div>
           </div>
