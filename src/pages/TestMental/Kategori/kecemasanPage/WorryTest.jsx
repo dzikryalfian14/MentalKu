@@ -29,11 +29,11 @@ const WorryTest = () => {
 
   const pdfWidth = 300; // Lebar halaman dalam satuan mm
   const pdfHeight = 400; // Tinggi halaman dalam satuan mm
-  
+
   const downloadPdf = () => {
     const pdf = new jsPDF({
       format: [pdfWidth, pdfHeight],
-      unit: 'mm',
+      unit: "mm",
     });
 
     // Dapatkan elemen HTML yang ingin dijadikan PDF
@@ -136,8 +136,7 @@ const WorryTest = () => {
     }
 
     setWorryCategory(worryCategory);
-    const result =
-      resultData.hasil_test.kecemasan[worryCategory.toLowerCase()];
+    const result = resultData.hasil_test.kecemasan[worryCategory.toLowerCase()];
     setProgressPercentage(percentage);
     setWorryResult(result);
   };
@@ -159,233 +158,237 @@ const WorryTest = () => {
   return (
     <>
       <div className="min-h-[70vh] flex flex-row max-md:flex-col md:justify-around items-center md:mx-5 mx-5 mt-10 lg:flex-wrap">
-      <div className="m-10 border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-rose-600 max-md:max-w-full max-md:my-10 max-md:px-20">
-        {currentQuestionIndex < quizData.questions_kecemasan.length && (
-          <h2 className="p-4 justify-center font-extrabold text-black text-justify text-4xl self-stretch max-md:max-w-full max-md:text-4xl">
-            Pertanyaan {currentQuestionIndex + 1} dari{" "}
-            {quizData.questions_kecemasan.length}
-          </h2>
-        )}
+        <div className="m-10 border shadow-sm bg-white self-center flex-col justify-center items-center mt-10 mb-20 mx-20 px-12 py-10 rounded-2xl border-solid border-rose-600 max-md:max-w-full max-md:my-10 max-md:px-20">
+          {currentQuestionIndex < quizData.questions_kecemasan.length && (
+            <h2 className="p-4 justify-center font-extrabold text-black text-justify text-4xl self-stretch max-md:max-w-full max-md:text-4xl">
+              Pertanyaan {currentQuestionIndex + 1} dari{" "}
+              {quizData.questions_kecemasan.length}
+            </h2>
+          )}
 
-        <Modal //Modal untuk 'opsi harus dijawab'
-          isOpen={isModalAnswer}
-          onRequestClose={() => setIsModalAnswer(false)}
-          contentLabel="Example Modal"
-          style={modalStyles}
-        >
-          <div className="flex flex-col items-center justify-center text-center h-auto">
-            <h2 className="text-red-500 text-2x1 font-bold">Peringatan!</h2>
-            <p className="text-base sm:text-2xl xl:text-3xl">
-              Anda harus menjawab pertanyaan ini terlebih dahulu.
-            </p>
-            <button
-              className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
-              onClick={() => setIsModalAnswer(false)}
-            >
-              Tutup
-            </button>
-          </div>
-        </Modal>
-
-        <Modal //modal sebelum submit
-          isOpen={isModalSubmit}
-          onRequestClose={() => setIsModalSubmit(false)}
-          contentLabel="Example Modal"
-          style={modalStyles}
-        >
-          <div className="flex flex-col items-center justify-center text-center h-auto">
-            <h2 className="text-red-500 text-3x1 font-bold">Perhatian!</h2>
-            <p className="text-base sm:text-2xl xl:text-3xl">
-              Apakah anda yakin semua jawaban terisi dengan baik dan jujur?
-            </p>
-            <div className="grid-cols-2 m-3">
+          <Modal //Modal untuk 'opsi harus dijawab'
+            isOpen={isModalAnswer}
+            onRequestClose={() => setIsModalAnswer(false)}
+            contentLabel="Example Modal"
+            style={modalStyles}
+          >
+            <div className="flex flex-col items-center justify-center text-center h-auto">
+              <h2 className="text-red-500 text-2x1 font-bold">Peringatan!</h2>
+              <p className="text-base sm:text-2xl xl:text-3xl">
+                Anda harus menjawab pertanyaan ini terlebih dahulu.
+              </p>
               <button
-                className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
-                onClick={() => {
-                  setIsModalSubmit(false);
-                  handlePreviousQuestion();
-                }}
+                className="text-white text-center text-3xl bg-rose-400 mt-5 m px-4 py-2 rounded-3xl m-auto"
+                onClick={() => setIsModalAnswer(false)}
               >
-                Tidak
-              </button>
-              <button
-                className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
-                onClick={() => {
-                  calculateScore();
-                  setIsModalSubmit(false);
-                }}
-              >
-                Yakin
+                Tutup
               </button>
             </div>
-          </div>
-        </Modal>
+          </Modal>
 
-        {/* Soal */}
-        <div className="bg-black self-stretch shrink-0 h-px mt-8 max-md:max-w-full" />
-        {currentQuestionIndex < quizData.questions_kecemasan.length && (
-          <div key={quizData.questions_kecemasan[currentQuestionIndex].id}>
-            <p className="text-base sm:text-2xl xl:text-3xl pt-4 pb-8 text-left font-bold text-black self-stretch mt-10 max-md:max-w-full max-md:mt-10">
-              {quizData.questions_kecemasan[currentQuestionIndex].question}
-            </p>
-            {/* Opsi */}
-            {quizData.questions_kecemasan[currentQuestionIndex].options.map(
-              (option, optionIndex) => (
+          <Modal //modal sebelum submit
+            isOpen={isModalSubmit}
+            onRequestClose={() => setIsModalSubmit(false)}
+            contentLabel="Example Modal"
+            style={modalStyles}
+          >
+            <div className="flex flex-col items-center justify-center text-center h-auto">
+              <h2 className="text-red-500 text-3x1 font-bold">Perhatian!</h2>
+              <p className="text-base sm:text-2xl xl:text-3xl">
+                Apakah anda yakin semua jawaban terisi dengan baik dan jujur?
+              </p>
+              <div className="grid-cols-2 m-3">
                 <button
-                  key={optionIndex}
-                  className={`sm:w-60 xl:w-42 h-17 border rounded-md justify-center m-3 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-4 py-4 border-solid max-md:px-10 hover:bg-gray-200${
-                    answers[currentQuestionIndex] ===
-                    quizData.questions_kecemasan[currentQuestionIndex].value[
-                      optionIndex
-                    ]
-                      ? " bg-rose-600 text-black font-extrabold" //active
-                      : ""
-                  }`}
-                  onClick={() =>
-                    handleAnswerChange(
-                      currentQuestionIndex,
+                  className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
+                  onClick={() => {
+                    setIsModalSubmit(false);
+                    handlePreviousQuestion();
+                  }}
+                >
+                  Tidak
+                </button>
+                <button
+                  className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
+                  onClick={() => {
+                    calculateScore();
+                    setIsModalSubmit(false);
+                  }}
+                >
+                  Yakin
+                </button>
+              </div>
+            </div>
+          </Modal>
+
+          {/* Soal */}
+          <div className="bg-black self-stretch shrink-0 h-px mt-8 max-md:max-w-full" />
+          {currentQuestionIndex < quizData.questions_kecemasan.length && (
+            <div key={quizData.questions_kecemasan[currentQuestionIndex].id}>
+              <p className="text-base sm:text-2xl xl:text-3xl pt-4 pb-8 text-left font-bold text-black self-stretch mt-10 max-md:max-w-full max-md:mt-10">
+                {quizData.questions_kecemasan[currentQuestionIndex].question}
+              </p>
+              {/* Opsi */}
+              {quizData.questions_kecemasan[currentQuestionIndex].options.map(
+                (option, optionIndex) => (
+                  <button
+                    key={optionIndex}
+                    className={`sm:w-60 xl:w-42 h-17 border rounded-md justify-center m-3 text-rose-600  text-justify text-2xl border-rose-600 bg-white grow items-stretch px-4 py-4 border-solid max-md:px-10 hover:bg-gray-200${
+                      answers[currentQuestionIndex] ===
                       quizData.questions_kecemasan[currentQuestionIndex].value[
                         optionIndex
-                      ],
-                    )
-                  }
-                >
-                  {option}
-                </button>
-              ),
-            )}
-            {/* tombol mundur dan maju */}
-            <br />
-            <div className="flex justify-between">
-              {currentQuestionIndex > 0 && (
+                      ]
+                        ? " bg-rose-600 text-black font-extrabold" //active
+                        : ""
+                    }`}
+                    onClick={() =>
+                      handleAnswerChange(
+                        currentQuestionIndex,
+                        quizData.questions_kecemasan[currentQuestionIndex]
+                          .value[optionIndex],
+                      )
+                    }
+                  >
+                    {option}
+                  </button>
+                ),
+              )}
+              {/* tombol mundur dan maju */}
+              <br />
+              <div className="flex justify-between">
+                {currentQuestionIndex > 0 && (
+                  <button
+                    onClick={handlePreviousQuestion}
+                    className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
+                  >
+                    <svg
+                      className="w-4 h-4 text-white-800 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="5"
+                        d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+                      />
+                    </svg>
+                  </button>
+                )}
                 <button
-                  onClick={handlePreviousQuestion}
+                  onClick={handleNextQuestion}
                   className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
                 >
-                  <svg
-                    className="w-4 h-4 text-white-800 dark:text-white"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 8 14"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="5"
-                      d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
-                    />
-                  </svg>
+                  {isNext}
+                  {currentQuestionIndex ===
+                  quizData.questions_kecemasan.length - 1 ? null : (
+                    <svg
+                      className="w-4 h-4 text-white-800 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 8 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="5"
+                        d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                      />
+                    </svg>
+                  )}
                 </button>
-              )}
-              <button
-                onClick={handleNextQuestion}
-                className="text-white text-center text-xl bg-rose-400 mt-20 px-4 py-4 rounded-3xl max-md:mt-10"
-                >
-                {isNext}
-                {currentQuestionIndex === quizData.questions_kecemasan.length - 1 ? null : (
-                <svg
-                  className="w-4 h-4 text-white-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 8 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="5"
-                    d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
-                  />
-                </svg>
-                )}
-              </button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* hasil */}
-        {currentQuestionIndex === quizData.questions_kecemasan.length && (
-          <div className="bg-white-100">
-            <div id="test-results">
-              <div>
-                <div className="bg-green-100">
-                  <h1 className="text-base sm:text-3xl text-center xl:text-4xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 max-md:max-w-full">
-                    Hasil Tes Kecemasan
-                  </h1>
-                  <p className="text-base sm:text-xl text-center xl:text-2xl text-black self-stretch leading-10 py-8 max-md:max-w-full">
-                    Pertanyaan-pertanyaan ini merujuk pada Alat Skrining
-                    Berbasis Bukti, namun hanya memberikan indikasi dan tidak
-                    dapat dianggap sebagai diagnosis resmi.
-                  </p>
-                </div>
-                <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
-                  Hasil Menunjukkan bahwa kondisi anda sebagai berikut
-                </p>
-
-                {/* Progress bar */}
-                <div className="flex items-center justify-center mt-5">
-                  <div className="relative w-full bg-gray-400 h-10 rounded-full">
-                    <div
-                      className="absolute h-10 bg-green-500 rounded-full text-right"
-                      style={{ width: `${progressPercentage}%` }}
-                    ><p className="font-bold w-10 h-10 pr-1 py-2 mx-3 text-1.5xl text-center border border-gray-500 bg-white text-right rounded-full">
-                    {progressPercentage}%</p></div>
+          {/* hasil */}
+          {currentQuestionIndex === quizData.questions_kecemasan.length && (
+            <div className="bg-white-100">
+              <div id="test-results">
+                <div>
+                  <div className="bg-green-100">
+                    <h1 className="text-base sm:text-3xl text-center xl:text-4xl pt-4 font-semibold text-black self-stretch mt-10 leading-10 max-md:max-w-full">
+                      Hasil Tes Kecemasan
+                    </h1>
+                    <p className="text-base sm:text-xl text-center xl:text-2xl text-black self-stretch leading-10 py-8 max-md:max-w-full">
+                      Pertanyaan-pertanyaan ini merujuk pada Alat Skrining
+                      Berbasis Bukti, namun hanya memberikan indikasi dan tidak
+                      dapat dianggap sebagai diagnosis resmi.
+                    </p>
                   </div>
-                </div>
-                <div className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
-                 <span className={worryDesign}>{worryCategory}</span>
-                </div>
-                {/* Hasil Test */}
-                <p className="text-base sm:text-xl font-semibold text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
-                  {
-                    resultData.hasil_test.kecemasan[
-                      worryCategory.toLowerCase()
-                    ]
-                  }
-                </p>
-                <p className="text-base sm:text-2xl text-center xl:text-3xl pb-8 font-semibold text-black self-stretch leading-10 max-md:max-w-full">
-                  Namun, kami menyarankan beberapa hal yang bisa Anda lakukan :
-                </p>
-                <div className="sm: grid-cols-1 xl:flex">
-                  <div className="w-full p-4">
-                    <ul className="text-base sm:text-2xl xl:text-2xl list-disc font-semibold text-black text-justify self-stretch grow whitespace-wrap max-md:max-w-full">
-                      {worryRecomendation.map((item) => (
-                        <li
-                          key={item.id}
-                          className="py-4 flex text-left font-medium whitespace-prewrap"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="darkgreen"
-                            className="w-7 h-8"
+                  <p className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
+                    Hasil Menunjukkan bahwa kondisi anda sebagai berikut
+                  </p>
+
+                  {/* Progress bar */}
+                  <div className="flex items-center justify-center mt-5">
+                    <div className="relative w-full bg-gray-400 h-10 rounded-full">
+                      <div
+                        className="absolute h-10 bg-green-500 rounded-full text-right"
+                        style={{ width: `${progressPercentage}%` }}
+                      >
+                        <p className="font-bold w-10 h-10 pr-1 py-2 mx-3 text-1.5xl text-center border border-gray-500 bg-white text-right rounded-full">
+                          {progressPercentage}%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-base sm:text-2xl text-center xl:text-3xl pt-4 pb-8 font-bold text-black self-stretch mt-10 leading-10 -mr-5 max-md:max-w-full">
+                    <span className={worryDesign}>{worryCategory}</span>
+                  </div>
+                  {/* Hasil Test */}
+                  <p className="text-base sm:text-xl font-semibold text-center xl:text-3xl text-black self-stretch mt-5 leading-10 -mr-5 py-8 max-md:max-w-full">
+                    {
+                      resultData.hasil_test.kecemasan[
+                        worryCategory.toLowerCase()
+                      ]
+                    }
+                  </p>
+                  <p className="text-base sm:text-2xl text-center xl:text-3xl pb-8 font-semibold text-black self-stretch leading-10 max-md:max-w-full">
+                    Namun, kami menyarankan beberapa hal yang bisa Anda lakukan
+                    :
+                  </p>
+                  <div className="sm: grid-cols-1 xl:flex">
+                    <div className="w-full p-4">
+                      <ul className="text-base sm:text-2xl xl:text-2xl list-disc font-semibold text-black text-justify self-stretch grow whitespace-wrap max-md:max-w-full">
+                        {worryRecomendation.map((item) => (
+                          <li
+                            key={item.id}
+                            className="py-4 flex text-left font-medium whitespace-prewrap"
                           >
-                            <path d="M10 1a6 6 0 00-3.815 10.631C7.237 12.5 8 13.443 8 14.456v.644a.75.75 0 00.572.729 6.016 6.016 0 002.856 0A.75.75 0 0012 15.1v-.644c0-1.013.762-1.957 1.815-2.825A6 6 0 0010 1zM8.863 17.414a.75.75 0 00-.226 1.483 9.066 9.066 0 002.726 0 .75.75 0 00-.226-1.483 7.553 7.553 0 01-2.274 0z" />
-                          </svg>
-                          {item.saran}
-                        </li>
-                      ))}
-                    </ul>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="darkgreen"
+                              className="w-7 h-8"
+                            >
+                              <path d="M10 1a6 6 0 00-3.815 10.631C7.237 12.5 8 13.443 8 14.456v.644a.75.75 0 00.572.729 6.016 6.016 0 002.856 0A.75.75 0 0012 15.1v-.644c0-1.013.762-1.957 1.815-2.825A6 6 0 0010 1zM8.863 17.414a.75.75 0 00-.226 1.483 9.066 9.066 0 002.726 0 .75.75 0 00-.226-1.483 7.553 7.553 0 01-2.274 0z" />
+                            </svg>
+                            {item.saran}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* unduh dokumen */}
-            <div className="flex justify-center items-center">
-              <button 
-                className="text-base sm:text-2x1 font-bold text-center text-3xl bg-rose-400 mt-5 mx-4 px-6 py-3 rounded-3xl"
-                onClick={downloadPdf}
-              >
-                Unduh Hasil Test (PDF)
-              </button>
+              {/* unduh dokumen */}
+              <div className="flex justify-center items-center">
+                <button
+                  className="text-base sm:text-2x1 font-bold text-center text-3xl bg-rose-400 mt-5 mx-4 px-6 py-3 rounded-3xl"
+                  onClick={downloadPdf}
+                >
+                  Unduh Hasil Test (PDF)
+                </button>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
       </div>
     </>
   );

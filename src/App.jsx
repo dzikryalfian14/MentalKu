@@ -48,10 +48,7 @@ const App = () => {
             path="/tes-kesehatan-mental/tes-stress"
             element={<StressTest />}
           />
-          <Route
-            path="/pageTemplate"
-            element={<pageTemplate />}
-          />
+          <Route path="/pageTemplate" element={<pageTemplate />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

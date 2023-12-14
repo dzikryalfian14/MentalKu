@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "../public/styles/index.scss";
 import "tailwindcss/tailwind.css";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

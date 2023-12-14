@@ -9,11 +9,7 @@ import imgCemas from "../../assets/cemas.png";
 import imgDepresi from "../../assets/depresi.png";
 import imgStress from "../../assets/stress.png";
 import imgPanduan from "../../assets/panduan.png";
-import {
-  Dialog,
-  DialogHeader,
-  DialogBody,
-} from "@material-tailwind/react";
+import { Dialog, DialogHeader, DialogBody } from "@material-tailwind/react";
 
 const TestMental = () => {
   const [size, setSize] = React.useState(null);
@@ -168,8 +164,8 @@ const TestMental = () => {
               </li>
               <li className="mb-2">
                 Setelah menyelesaikan semua pertanyaan, hasil tes akan
-                dikategorikan sesuai dengan kondisimu saat ini dan hasil 
-                test bisa di cetak sesuai dengan format pdf
+                dikategorikan sesuai dengan kondisimu saat ini dan hasil test
+                bisa di cetak sesuai dengan format pdf
               </li>
               <li>
                 Kami menekankan pentingnya untuk tidak melakukan self-diagnosis.

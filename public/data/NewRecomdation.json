@@ -1,203 +1,214 @@
 {
-    "normal_kecemasan": [
-      {
-        "id": "1",
-        "saran": "Jaga kesehatan mental dengan melakukan aktivitas yang menyenangkan dan mendukung kesejahteraan emosional Anda setiap hari."
-      },
-      {
-        "id": "2",
-        "saran": "Atur waktu luang untuk bersantai dan lakukan kegiatan yang membawa kebahagiaan serta ketenangan."
-      },
-      {
-        "id": "3",
-        "saran": "Mengelola prioritas hidup untuk menciptakan keseimbangan antara tuntutan harian dan kebutuhan pribadi Anda."
-    }],
-    "ringan_kecemasan": [
-      {
-        "id": "1",
-        "saran": "Cari dukungan dari teman, keluarga, atau komunitas untuk berbicara tentang perasaan Anda."
-      },
-      {
-        "id": "2",
-        "saran": "Jaga pola hidup sehat dengan menjaga makanan, tidur yang cukup, dan rutin berolahraga."
-      },
-      {
-        "id": "3",
-        "saran": "Cari bantuan profesional melalui konseling atau terapi untuk panduan lebih lanjut."
-    }],
-    "sedang_kecemasan": [
-      {
-        "id": "1",
-        "saran": "Lakukan aktivitas relaksasi seperti meditasi, yoga, atau teknik pernapasan untuk mengelola kecemasan."
-      },
-      {
-        "id": "2",
-        "saran": "Cari bantuan profesional untuk dukungan dan strategi pengelolaan kecemasan yang lebih terstruktur."
-      },
-      {
-        "id": "3",
-        "saran": "Pertimbangkan terapi dan obat-obatan di bawah pengawasan profesional kesehatan mental."
-    }],
-    "parah_kecemasan": [
-      {
-        "id": "1",
-        "saran": "Konsultasikan dengan profesional kesehatan mental untuk evaluasi mendalam dan perencanaan perawatan yang sesuai."
-      },
-      {
-        "id": "2",
-        "saran": "Terapi yang intensif, seperti terapi kognitif perilaku atau terapi psikologis, dapat menjadi langkah yang efektif."
-      },
-      {
-        "id": "3",
-        "saran": "Dapatkan dukungan dari komunitas untuk berbagi pengalaman dan memperkuat jaringan sosial Anda."
-    }],
-    "sangat-parah_kecemasan": [
-      {
-        "id": "1",
-        "saran": "Segera cari bantuan medis darurat jika menghadapi krisis mental yang mendesak."
-      },
-      {
-        "id": "2",
-        "saran": "Dapatkan dukungan dan perawatan jangka panjang melibatkan profesional kesehatan mental."
-      }
-    ],
-  
-    "normal_stress": [
-      {
-        "id": "1",
-        "saran": "Lakukan olahraga dan aktivitas fisik secara teratur untuk mengurangi tingkat stres."
-      },
-      {
-        "id": "2",
-        "saran": "Atur waktu dengan efisien untuk menghindari penumpukan tugas dan tekanan."
-      },
-      {
-        "id": "3",
-        "saran": "Praktik relaksasi dan meditasi untuk menjaga ketenangan batin."
-    }],
-    "ringan_stress": [
-      {
-        "id": "1",
-        "saran": "Komunikasi yang efektif dengan orang-orang terdekat untuk menyampaikan perasaan dan menyelesaikan konflik."
-      },
-      {
-        "id": "2",
-        "saran": "Ambil istirahat secara teratur untuk mencegah kelelahan dan menjaga keseimbangan hidup."
-      },
-      {
-        "id": "3",
-        "saran": "Hadapi masalah dengan pikiran positif dan solusi yang konstruktif."
-    }],
-    "sedang_stress": [
-      {
-        "id": "1",
-        "saran": "Atur prioritas hidup dengan menetapkan tujuan yang realistis dan membagi beban kerja secara seimbang."
-      },
-      {
-        "id": "2",
-        "saran": "Tetapkan batas waktu diri sendiri untuk mencegah overcommitment dan kelelahan."
-      },
-      {
-        "id": "3",
-        "saran": "Berkonsultasi dengan profesional kesehatan untuk strategi pengelolaan stres yang lebih mendalam."
-    }],
-    "parah_stress": [
-      {
-        "id": "1",
-        "saran": "Dapatkan bantuan profesional mendalam dari konsultan psikologi atau terapis berpengalaman."
-      },
-      {
-        "id": "2",
-        "saran": "Terapi psikologis fokus pada penyebab stres dan pengembangan strategi coping."
-      },
-      {
-        "id": "3",
-        "saran": "Istirahat dan lakukan perawatan diri secara intensif untuk pemulihan menyeluruh."
-    }],
-    "sangat-parah_stress": [
-      {
-        "id": "1",
-        "saran": "Dapatkan bantuan profesional mendalam dari konsultan psikologi atau terapis berpengalaman."
-      },
-      {
-        "id": "2",
-        "saran": "Terapi psikologis fokus pada penyebab stres dan pengembangan strategi coping."
-      },
-      {
-        "id": "3",
-        "saran": "Istirahat dan lakukan perawatan diri secara intensif untuk pemulihan menyeluruh."
-      }
-    ],
-  
-    "normal_depresi": [
-      {
-        "id": "1",
-        "saran": "Jaga kesehatan mental dengan mengenali dan merawat diri sendiri secara positif setiap hari."
-      },
-      {
-        "id": "2",
-        "saran": "Olahraga dan aktivitas fisik secara teratur dapat membantu meningkatkan mood dan energi."
-      },
-      {
-        "id": "3",
-        "saran": "Istirahat yang cukup dan teratur untuk mendukung proses pemulihan tubuh dan pikiran."
-      },
-      {
-        "id": "4",
-        "saran": "Terapkan teknik relaksasi pernapasan untuk menenangkan pikiran dan tubuh."
-    }],
-    "ringan_depresi": [
-      {
-        "id": "1",
-        "saran": "Konseling atau terapi sebagai sarana untuk berbicara dan memahami lebih dalam perasaan Anda."
-      },
-      {
-        "id": "2",
-        "saran": "Terlibat dalam kegiatan sosial untuk memperkuat dukungan sosial dan meningkatkan kesejahteraan emosional."
-      },
-      {
-        "id": "3",
-        "saran": "Perhatikan pola makan sehat sebagai bagian dari perawatan diri sehari-hari."
-    }],
-    "sedang_depresi": [
-      {
-        "id": "1",
-        "saran": "Konseling atau terapi secara teratur untuk dukungan emosional dan pemahaman lebih dalam terkait depresi."
-      },
-      {
-        "id": "2",
-        "saran": "Pertimbangkan menggunakan obat-obatan di bawah pengawasan profesional kesehatan mental."
-      },
-      {
-        "id": "3",
-        "saran": "Rencanakan kegiatan setiap hari sebagai langkah menuju pemulihan dan rutinitas positif."
-    }],
-    "parah_depresi": [
-      {
-        "id": "1",
-        "saran": "Perlu perawatan medis segera untuk evaluasi mendalam dan manajemen gejala depresi."
-      },
-      {
-        "id": "2",
-        "saran": "Pengobatan komprehensif melibatkan terapi, obat-obatan, dan dukungan profesional secara bersamaan."
-      },
-      {
-        "id": "3",
-        "saran": "Melibatkan dukungan keluarga dan lingkungan untuk mendukung proses pemulihan Anda."
-    }],
-    "sangat-parah_depresi": [
-      {
-        "id": "1",
-        "saran": "Perlu perawatan medis segera untuk evaluasi mendalam dan manajemen gejala depresi."
-      },
-      {
-        "id": "2",
-        "saran": "Pengobatan komprehensif melibatkan terapi, obat-obatan, dan dukungan profesional secara bersamaan."
-      },
-      {
-        "id": "3",
-        "saran": "Melibatkan dukungan keluarga dan lingkungan untuk mendukung proses pemulihan Anda."
-      }
-    ]
-  }
-  
+  "normal_kecemasan": [
+    {
+      "id": "1",
+      "saran": "Jaga kesehatan mental dengan melakukan aktivitas yang menyenangkan dan mendukung kesejahteraan emosional Anda setiap hari."
+    },
+    {
+      "id": "2",
+      "saran": "Atur waktu luang untuk bersantai dan lakukan kegiatan yang membawa kebahagiaan serta ketenangan."
+    },
+    {
+      "id": "3",
+      "saran": "Mengelola prioritas hidup untuk menciptakan keseimbangan antara tuntutan harian dan kebutuhan pribadi Anda."
+    }
+  ],
+  "ringan_kecemasan": [
+    {
+      "id": "1",
+      "saran": "Cari dukungan dari teman, keluarga, atau komunitas untuk berbicara tentang perasaan Anda."
+    },
+    {
+      "id": "2",
+      "saran": "Jaga pola hidup sehat dengan menjaga makanan, tidur yang cukup, dan rutin berolahraga."
+    },
+    {
+      "id": "3",
+      "saran": "Cari bantuan profesional melalui konseling atau terapi untuk panduan lebih lanjut."
+    }
+  ],
+  "sedang_kecemasan": [
+    {
+      "id": "1",
+      "saran": "Lakukan aktivitas relaksasi seperti meditasi, yoga, atau teknik pernapasan untuk mengelola kecemasan."
+    },
+    {
+      "id": "2",
+      "saran": "Cari bantuan profesional untuk dukungan dan strategi pengelolaan kecemasan yang lebih terstruktur."
+    },
+    {
+      "id": "3",
+      "saran": "Pertimbangkan terapi dan obat-obatan di bawah pengawasan profesional kesehatan mental."
+    }
+  ],
+  "parah_kecemasan": [
+    {
+      "id": "1",
+      "saran": "Konsultasikan dengan profesional kesehatan mental untuk evaluasi mendalam dan perencanaan perawatan yang sesuai."
+    },
+    {
+      "id": "2",
+      "saran": "Terapi yang intensif, seperti terapi kognitif perilaku atau terapi psikologis, dapat menjadi langkah yang efektif."
+    },
+    {
+      "id": "3",
+      "saran": "Dapatkan dukungan dari komunitas untuk berbagi pengalaman dan memperkuat jaringan sosial Anda."
+    }
+  ],
+  "sangat-parah_kecemasan": [
+    {
+      "id": "1",
+      "saran": "Segera cari bantuan medis darurat jika menghadapi krisis mental yang mendesak."
+    },
+    {
+      "id": "2",
+      "saran": "Dapatkan dukungan dan perawatan jangka panjang melibatkan profesional kesehatan mental."
+    }
+  ],
+
+  "normal_stress": [
+    {
+      "id": "1",
+      "saran": "Lakukan olahraga dan aktivitas fisik secara teratur untuk mengurangi tingkat stres."
+    },
+    {
+      "id": "2",
+      "saran": "Atur waktu dengan efisien untuk menghindari penumpukan tugas dan tekanan."
+    },
+    {
+      "id": "3",
+      "saran": "Praktik relaksasi dan meditasi untuk menjaga ketenangan batin."
+    }
+  ],
+  "ringan_stress": [
+    {
+      "id": "1",
+      "saran": "Komunikasi yang efektif dengan orang-orang terdekat untuk menyampaikan perasaan dan menyelesaikan konflik."
+    },
+    {
+      "id": "2",
+      "saran": "Ambil istirahat secara teratur untuk mencegah kelelahan dan menjaga keseimbangan hidup."
+    },
+    {
+      "id": "3",
+      "saran": "Hadapi masalah dengan pikiran positif dan solusi yang konstruktif."
+    }
+  ],
+  "sedang_stress": [
+    {
+      "id": "1",
+      "saran": "Atur prioritas hidup dengan menetapkan tujuan yang realistis dan membagi beban kerja secara seimbang."
+    },
+    {
+      "id": "2",
+      "saran": "Tetapkan batas waktu diri sendiri untuk mencegah overcommitment dan kelelahan."
+    },
+    {
+      "id": "3",
+      "saran": "Berkonsultasi dengan profesional kesehatan untuk strategi pengelolaan stres yang lebih mendalam."
+    }
+  ],
+  "parah_stress": [
+    {
+      "id": "1",
+      "saran": "Dapatkan bantuan profesional mendalam dari konsultan psikologi atau terapis berpengalaman."
+    },
+    {
+      "id": "2",
+      "saran": "Terapi psikologis fokus pada penyebab stres dan pengembangan strategi coping."
+    },
+    {
+      "id": "3",
+      "saran": "Istirahat dan lakukan perawatan diri secara intensif untuk pemulihan menyeluruh."
+    }
+  ],
+  "sangat-parah_stress": [
+    {
+      "id": "1",
+      "saran": "Dapatkan bantuan profesional mendalam dari konsultan psikologi atau terapis berpengalaman."
+    },
+    {
+      "id": "2",
+      "saran": "Terapi psikologis fokus pada penyebab stres dan pengembangan strategi coping."
+    },
+    {
+      "id": "3",
+      "saran": "Istirahat dan lakukan perawatan diri secara intensif untuk pemulihan menyeluruh."
+    }
+  ],
+
+  "normal_depresi": [
+    {
+      "id": "1",
+      "saran": "Jaga kesehatan mental dengan mengenali dan merawat diri sendiri secara positif setiap hari."
+    },
+    {
+      "id": "2",
+      "saran": "Olahraga dan aktivitas fisik secara teratur dapat membantu meningkatkan mood dan energi."
+    },
+    {
+      "id": "3",
+      "saran": "Istirahat yang cukup dan teratur untuk mendukung proses pemulihan tubuh dan pikiran."
+    },
+    {
+      "id": "4",
+      "saran": "Terapkan teknik relaksasi pernapasan untuk menenangkan pikiran dan tubuh."
+    }
+  ],
+  "ringan_depresi": [
+    {
+      "id": "1",
+      "saran": "Konseling atau terapi sebagai sarana untuk berbicara dan memahami lebih dalam perasaan Anda."
+    },
+    {
+      "id": "2",
+      "saran": "Terlibat dalam kegiatan sosial untuk memperkuat dukungan sosial dan meningkatkan kesejahteraan emosional."
+    },
+    {
+      "id": "3",
+      "saran": "Perhatikan pola makan sehat sebagai bagian dari perawatan diri sehari-hari."
+    }
+  ],
+  "sedang_depresi": [
+    {
+      "id": "1",
+      "saran": "Konseling atau terapi secara teratur untuk dukungan emosional dan pemahaman lebih dalam terkait depresi."
+    },
+    {
+      "id": "2",
+      "saran": "Pertimbangkan menggunakan obat-obatan di bawah pengawasan profesional kesehatan mental."
+    },
+    {
+      "id": "3",
+      "saran": "Rencanakan kegiatan setiap hari sebagai langkah menuju pemulihan dan rutinitas positif."
+    }
+  ],
+  "parah_depresi": [
+    {
+      "id": "1",
+      "saran": "Perlu perawatan medis segera untuk evaluasi mendalam dan manajemen gejala depresi."
+    },
+    {
+      "id": "2",
+      "saran": "Pengobatan komprehensif melibatkan terapi, obat-obatan, dan dukungan profesional secara bersamaan."
+    },
+    {
+      "id": "3",
+      "saran": "Melibatkan dukungan keluarga dan lingkungan untuk mendukung proses pemulihan Anda."
+    }
+  ],
+  "sangat-parah_depresi": [
+    {
+      "id": "1",
+      "saran": "Perlu perawatan medis segera untuk evaluasi mendalam dan manajemen gejala depresi."
+    },
+    {
+      "id": "2",
+      "saran": "Pengobatan komprehensif melibatkan terapi, obat-obatan, dan dukungan profesional secara bersamaan."
+    },
+    {
+      "id": "3",
+      "saran": "Melibatkan dukungan keluarga dan lingkungan untuk mendukung proses pemulihan Anda."
+    }
+  ]
+}
