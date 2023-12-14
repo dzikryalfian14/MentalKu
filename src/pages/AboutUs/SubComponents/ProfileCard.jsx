@@ -16,7 +16,7 @@ export function ProfileCard(props) {
         className="h-auto max-h-80 px-3 bg-inherit shadow-none"
       >
         <img
-          src={`./src/assets/teams/${props.noId}-photo.png`}
+          src={props.photo}
           alt={`${props.name}-picture`}
         />
       </CardHeader>
@@ -39,7 +39,8 @@ export function ProfileCard(props) {
             variant="lead"
             color="blue"
             textGradient
-          >
+            target="_blank"
+            >
             <FaLinkedin />
           </Typography>
         </Tooltip>
@@ -50,6 +51,7 @@ export function ProfileCard(props) {
             variant="lead"
             color="light-blue"
             textGradient
+            target="_blank"
           >
             <FaInstagram />
           </Typography>
