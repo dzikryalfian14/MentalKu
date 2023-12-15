@@ -2,7 +2,7 @@
 
 ## Apa itu MentalKu
 
-<img src="public/logo-1.png" width="100">
+<img src="public/logo-1.png" width="100" style="border-radius: 10px;">
 
 Aplikasi Mentalku adalah aplikasi untuk membantu pengguna mengatasi tantangan kesehatan mental mereka dengan memberikan panduan langkah demi langkah dan menghasilkan saran yang komprehensif
 
