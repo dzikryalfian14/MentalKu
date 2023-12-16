@@ -198,7 +198,7 @@ const DepressionTest = () => {
               <p className="text-base sm:text-2xl xl:text-3xl">
                 Apakah anda yakin semua jawaban terisi dengan baik dan jujur?
               </p>
-              <div className="grid-cols-2 m-3">
+              <div className="sm:gap-4 grid-cols-2 m-3">
                 <button
                   className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
                   onClick={() => {
@@ -209,7 +209,7 @@ const DepressionTest = () => {
                   Tidak
                 </button>
                 <button
-                  className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
+                  className="text-white text-center text-3xl bg-rose-400 mt-3 mx-5 m px-4 py-2 rounded-3xl m-auto"
                   onClick={() => {
                     calculateScore();
                     setIsModalSubmit(false);
