@@ -208,7 +208,7 @@ const WorryTest = () => {
                   Tidak
                 </button>
                 <button
-                  className="text-white text-center text-3xl bg-rose-400 mx-5 m px-4 py-2 rounded-3xl m-auto"
+                  className="text-white text-center text-3xl bg-rose-400 mt-3 mx-5 m px-4 py-2 rounded-3xl m-auto"
                   onClick={() => {
                     calculateScore();
                     setIsModalSubmit(false);
